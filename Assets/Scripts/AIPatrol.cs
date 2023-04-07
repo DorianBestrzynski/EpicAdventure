@@ -15,6 +15,7 @@ public class AIPatrol : MonoBehaviour
     private bool mustTurn, canShoot;
 
     private float distanceToPlayer;
+    private float distanceToPlayer2;
 
     [SerializeField] private Transform groundCheckPos;
 
@@ -31,7 +32,7 @@ public class AIPatrol : MonoBehaviour
 
     [SerializeField] private Collider2D bodyColider;
 
-    [SerializeField] private Transform player, shootPos;
+    [SerializeField] private Transform player, secondPlayer, shootPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,25 +52,20 @@ public class AIPatrol : MonoBehaviour
 
         distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
+        distanceToPlayer2 = Vector2.Distance(transform.position, secondPlayer.position);
+
         if (distanceToPlayer <= range)
 
         {
-            Debug.Log(distanceToPlayer + " Dist");
-            Debug.Log(range + " range");
-            if (player.position.x > transform.position.x && transform.localScale.x < 0 || player.position.x < transform.position.x && transform.localScale.x > 0)
-            {
-                Flip();
-            }
-
-            state = MovementState.Idle;
-            mustPatrol = false;
-            rb.velocity = Vector2.zero;
-            if (canShoot && !StaticVariables.isDead )
-            {
-                Debug.Log("Inside" + StaticVariables.isDead);
-                StartCoroutine(Attack());
-            }
+            Debug.Log("P1 " + canShoot);
+           state = ShootingAction(player);
         }
+        else if (distanceToPlayer2 <= range)
+        {
+            Debug.Log("P2 " + canShoot);
+            state = ShootingAction(secondPlayer);
+        }
+
         else
         {
             state = MovementState.Running;
@@ -78,11 +74,30 @@ public class AIPatrol : MonoBehaviour
         anim.SetInteger("state", (int)state);
     }
 
+    private MovementState ShootingAction(Transform player)
+    {
+        if (player.position.x > transform.position.x && transform.localScale.x < 0 || player.position.x < transform.position.x && transform.localScale.x > 0)
+        {
+            Flip();
+        }
+        MovementState state = MovementState.Idle;
+        mustPatrol = false;
+        rb.velocity = Vector2.zero;
+        if (canShoot && !StaticVariables.isDead)
+        {
+            StartCoroutine(Attack());
+        }
+
+        return state;
+    }
+   
+
      IEnumerator Attack()
      {
          canShoot = false;
          yield return new WaitForSeconds(timeBtwShots);
         GameObject newBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
+        Debug.Log("new bullet");
 
         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * walkSpeed * Time.deltaTime, 0.1f);
         Debug.Log("Here");

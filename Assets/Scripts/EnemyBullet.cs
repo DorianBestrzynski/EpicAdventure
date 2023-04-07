@@ -17,19 +17,13 @@ public class EnemyBullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-   
-            if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Terrain"))
-            {
-                if(col.gameObject.CompareTag("Player"))
-                {
-                    StaticVariables.isDead = true;
-                }
+
+        if (col.gameObject.CompareTag("Player") || col.gameObject.CompareTag("Terrain") ||
+            col.gameObject.CompareTag("Player2"))
+        {
 
             Die();
 
-
-                
-            
         }
 
     }

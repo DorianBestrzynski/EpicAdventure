@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,10 +14,22 @@ public class PlayerMovement : MonoBehaviour
     private float dirX = 0f;
 
     private SpriteRenderer sprite;
+    
+    private float magicianSpeed = 8f;
 
-    [SerializeField] private float moveSpeed = 7f;
+    private float knightSpeed = 6f;
 
-    [SerializeField] private float jumpForce = 14f;
+
+    [SerializeField] private float magicianJump = 16f;
+
+    [SerializeField] private float knightJump = 14f;
+
+    [SerializeField] private int magicianHealth= 2;
+
+    [SerializeField] private int knightHealth = 4;
+
+    private PlayerInput playerInput;
+
 
     private BoxCollider2D coll;
 
@@ -26,7 +39,10 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private AudioSource jumpSoundEffect;
 
- 
+    [SerializeField] public GameObject player1, player2;
+    [SerializeField] private AudioSource attackSoundEffect;
+
+
 
     private void Start()
     {
@@ -34,12 +50,73 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         coll = GetComponent<BoxCollider2D>();
+        playerInput = GetComponent<PlayerInput>();
+      
+
+        Debug.Log("hardness level" + StaticVariables.isEasyMode);
+        if (StaticVariables.isPLayerOneMagician)
+        {
+            StaticVariables.playerOneSpeed = magicianSpeed;
+            StaticVariables.playerOneJumpForce = magicianJump;
+ 
+
+        }
+        else
+        {
+            StaticVariables.playerOneSpeed = knightSpeed;
+            StaticVariables.playerOneJumpForce = knightJump;
+            Vector3 local = transform.localScale;
+           
+        }
+
+        if (StaticVariables.isPLayerTwoMagician)
+        {
+            StaticVariables.playerTwoSpeed = magicianSpeed;
+            StaticVariables.playerTwoJumpForce = magicianJump;
+
+        }
+        else
+        {
+            StaticVariables.playerTwoSpeed = knightSpeed;
+            StaticVariables.playerTwoJumpForce = knightJump;
+            StaticVariables.playerTwoLife = knightHealth;
+        
+        }
+
+        if (transform.gameObject.CompareTag("Player") && StaticVariables.isPLayerOneMagician)
+        {
+            playerInput.SwitchCurrentActionMap("Player2");
+            StaticVariables.hasSwithed = true;
+        }
+        if (transform.gameObject.CompareTag("Player2") && !StaticVariables.isPLayerTwoMagician)
+        {
+            playerInput.SwitchCurrentActionMap("Player");
+            StaticVariables.hasSwithed = true;
+        }
+
+        if (transform.gameObject.CompareTag("Player") && !StaticVariables.isPLayerOneMagician)
+        {
+            transform.localScale = new Vector3(5f, 5f, 1);
+        }
+        else if (transform.gameObject.CompareTag("Player2") && !StaticVariables.isPLayerTwoMagician)
+
+        {
+            transform.localScale = new Vector3(5f, 5f, 1);
+        }
+
+
     }
 
     private void Update()
     {
-        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-        Debug.Log(rb.velocity);
+        if ((transform.gameObject.CompareTag("Player") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player2") && StaticVariables.hasSwithed))
+        {
+            rb.velocity = new Vector2(dirX * StaticVariables.playerOneSpeed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(dirX * StaticVariables.playerTwoSpeed, rb.velocity.y);
+        }
 
         UpdateAnimationState();
 
@@ -47,7 +124,6 @@ public class PlayerMovement : MonoBehaviour
     }
     public void OnMove(InputAction.CallbackContext context)
     {
-        Debug.Log("On Move");
         dirX = context.ReadValue<Vector2>().x;
     }
 
@@ -56,13 +132,26 @@ public class PlayerMovement : MonoBehaviour
          if (IsGrounded())
          { 
              jumpSoundEffect.Play();
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-         }
+             if ((transform.gameObject.CompareTag("Player") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player2") && StaticVariables.hasSwithed))
+             {
+                 rb.velocity = new Vector2(rb.velocity.x, StaticVariables.playerOneJumpForce);
+             }
+             else
+             {
+                 rb.velocity = new Vector2(rb.velocity.x, StaticVariables.playerTwoJumpForce);
+
+            }
+        }
      }
+
+    public void OnAttack(InputAction.CallbackContext context)
+     {
+        attackSoundEffect.Play();
+        anim.SetTrigger("attack");
+    }
 
     private void UpdateAnimationState()
     {
-        Debug.Log("Change animation");
         MovementState state;
         if (dirX > 0f)
         {

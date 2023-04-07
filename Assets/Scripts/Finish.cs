@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,17 +17,30 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player" && !levelCompleted)
+        if ((collision.gameObject.name == "Knight" || collision.gameObject.name == "Magician") && !levelCompleted)
         {
             finishSound.Play();
             levelCompleted = true;
             Invoke("CompleteLevel", 2f);
         }
+        Debug.Log("lol");
     }
 
     private void CompleteLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StaticVariables.playerOneFinalCollectibles = StaticVariables.playerOneCollectibles;
+        StaticVariables.playerTwoFinalCollectibles = StaticVariables.playerTwoCollectibles;
+        StaticVariables.playerOneCollectibles = StaticVariables.playerOneFinalCollectibles;
+        StaticVariables.playerTwoCollectibles = StaticVariables.playerTwoFinalCollectibles;
+
+        if (StaticVariables.is2Levels && SceneManager.GetActiveScene().buildIndex == 7)
+        {
+            SceneManager.LoadScene(11);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
 }

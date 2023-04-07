@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,35 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform player;
+    [SerializeField] private Transform player2;
+    [SerializeField] private Camera camera;
+
+    private float maxDistance = 10;
+
     private void Update()
     {
-        transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
+       
+        float dist = Math.Abs(Vector3.Distance(player.position, player2.position));
+
+        transform.position = new Vector3((player.position.x + player2.position.x) / 2,
+            (player.position.y + player2.position.y) / 2, transform.position.z);
+         if (dist < 2 * maxDistance)
+        {
+
+            camera.orthographicSize = 10f;
+        }
+
+        else if(dist < 60f)
+        {
+            camera.orthographicSize = 20f;
+
+        }
+
+        else 
+        { 
+            camera.orthographicSize = 40f;
+        }
+
+
     }
 }

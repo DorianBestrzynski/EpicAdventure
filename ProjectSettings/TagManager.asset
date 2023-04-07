@@ -7,6 +7,13 @@ TagManager:
   - Pineapple
   - Trap
   - Terrain
+  - Player2
+  - Bullet
+  - HealthPotion
+  - SpeedPotion
+  - OutOfMap
+  - Cave
+  - CloudPlatform
   layers:
   - Default
   - TransparentFX
@@ -15,8 +22,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Background
+  - Boss
   - 
   - 
   - 
