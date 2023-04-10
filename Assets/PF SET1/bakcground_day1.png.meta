@@ -2763,7 +2763,7 @@ TextureImporter:
       213: 3007070929092460644
     second: bakcground_day1_919
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -2784,6 +2784,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -2822,6 +2823,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -2849,6 +2851,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -7492,6 +7506,227 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      bakcground_day1_0: 3388526275895917944
+      bakcground_day1_1: 1315028277940313233
+      bakcground_day1_10: 5734817380017863140
+      bakcground_day1_100: 5034918313016912113
+      bakcground_day1_101: 2576981917102584877
+      bakcground_day1_102: -1861450602643239606
+      bakcground_day1_103: 3762476738150748979
+      bakcground_day1_104: 4555146759143130465
+      bakcground_day1_105: 2317387217846554354
+      bakcground_day1_106: 2031298789684649233
+      bakcground_day1_107: 806837886395583606
+      bakcground_day1_108: 169550167786880957
+      bakcground_day1_109: -7043370722573249616
+      bakcground_day1_11: -7829726977306084577
+      bakcground_day1_110: 4984568819376620925
+      bakcground_day1_111: -8899793481731299956
+      bakcground_day1_112: -8582096291279520337
+      bakcground_day1_113: 8091221492436813771
+      bakcground_day1_114: 5730425086099156918
+      bakcground_day1_115: 6641317966363611464
+      bakcground_day1_116: -478950694694336039
+      bakcground_day1_117: -8025449903620103054
+      bakcground_day1_118: -1787137082673317859
+      bakcground_day1_119: 7325715154680332993
+      bakcground_day1_12: -5859456943868764200
+      bakcground_day1_120: -8225683546050233963
+      bakcground_day1_121: -1045981013301185190
+      bakcground_day1_122: 5849009149591615433
+      bakcground_day1_123: -8562441578552943400
+      bakcground_day1_124: -9148841960247464926
+      bakcground_day1_125: 6930385105192641820
+      bakcground_day1_126: 4384054534930870681
+      bakcground_day1_127: 9075380752451141646
+      bakcground_day1_128: -2883719974616943099
+      bakcground_day1_129: 2024856243847621850
+      bakcground_day1_13: -9147036229410627461
+      bakcground_day1_130: 8235821487695755287
+      bakcground_day1_131: 7928135706773292841
+      bakcground_day1_132: -3029344304623220950
+      bakcground_day1_133: -5776630265952286757
+      bakcground_day1_134: 2491477908272344777
+      bakcground_day1_135: 3323251385640676252
+      bakcground_day1_136: -1264745642793794216
+      bakcground_day1_137: -313402317792303814
+      bakcground_day1_138: 9032105322621706424
+      bakcground_day1_139: -6710071468231951616
+      bakcground_day1_14: 6930309983747427700
+      bakcground_day1_140: -4077680837421319534
+      bakcground_day1_141: 807056787608688595
+      bakcground_day1_142: -424214183152033957
+      bakcground_day1_143: 1327349673704515208
+      bakcground_day1_144: 9062809309916755208
+      bakcground_day1_145: 1140849572038910213
+      bakcground_day1_146: -422326468742563260
+      bakcground_day1_147: 1960776682085473564
+      bakcground_day1_148: -7109664848943877038
+      bakcground_day1_149: -2400821609212758190
+      bakcground_day1_15: -3735438867395221926
+      bakcground_day1_150: -1783572189057192494
+      bakcground_day1_151: 6700060787457186372
+      bakcground_day1_152: 5113247303182593648
+      bakcground_day1_153: -4327274109698113543
+      bakcground_day1_154: 5623260805045110509
+      bakcground_day1_155: -3467406408651413446
+      bakcground_day1_156: 8008043783554835438
+      bakcground_day1_157: -2206493568456609760
+      bakcground_day1_158: 4053418235907531864
+      bakcground_day1_159: -616326429699075364
+      bakcground_day1_16: -5203111931578922110
+      bakcground_day1_160: -1632544190689748929
+      bakcground_day1_161: 7107188425698143157
+      bakcground_day1_162: -591450596102932772
+      bakcground_day1_163: 1543861699655432763
+      bakcground_day1_164: -4971831846997000081
+      bakcground_day1_165: 3307673980170205668
+      bakcground_day1_166: 6502517864199362706
+      bakcground_day1_167: 9165175406706949734
+      bakcground_day1_168: 362467880647100286
+      bakcground_day1_169: -4101995703843890499
+      bakcground_day1_17: -332681053504427673
+      bakcground_day1_170: 1493455632598966577
+      bakcground_day1_171: -4834461075871966481
+      bakcground_day1_172: -639604968037276421
+      bakcground_day1_173: -7142370759293686083
+      bakcground_day1_174: -3783694967423838525
+      bakcground_day1_175: 7158327353515822931
+      bakcground_day1_176: -5096704127741164618
+      bakcground_day1_177: -1861080546898453113
+      bakcground_day1_178: 1613685668871082255
+      bakcground_day1_179: -7764160073415292578
+      bakcground_day1_18: -2500950472360653652
+      bakcground_day1_180: 5234929813432720523
+      bakcground_day1_181: -717051528638732781
+      bakcground_day1_182: -4164001522934392486
+      bakcground_day1_183: 2005970660579661593
+      bakcground_day1_184: 2135782654142963095
+      bakcground_day1_185: 2468713238314355844
+      bakcground_day1_186: -8511011117106908321
+      bakcground_day1_187: 4899010589151801701
+      bakcground_day1_188: -6258397918989546357
+      bakcground_day1_189: -5188757100400534604
+      bakcground_day1_19: -2977368879014148239
+      bakcground_day1_190: 4409134955232028982
+      bakcground_day1_191: -8114425190832172269
+      bakcground_day1_192: 5078505098160708085
+      bakcground_day1_193: 2387460430005369775
+      bakcground_day1_194: -4724130616608617276
+      bakcground_day1_195: -850416277052793717
+      bakcground_day1_196: -1657173740410624087
+      bakcground_day1_197: 6737077826688649085
+      bakcground_day1_198: -1210131702312827468
+      bakcground_day1_199: -8211267350521190332
+      bakcground_day1_2: -549184067376988701
+      bakcground_day1_20: 5383841562943088421
+      bakcground_day1_200: -7333656380913774231
+      bakcground_day1_201: -7790267262427721786
+      bakcground_day1_202: 8642624084819747448
+      bakcground_day1_203: -8143137380858340601
+      bakcground_day1_204: -4026410481888811642
+      bakcground_day1_205: -5254934735084370837
+      bakcground_day1_206: 6772373668590086160
+      bakcground_day1_207: -4093801784575440669
+      bakcground_day1_208: -1925581561790235585
+      bakcground_day1_209: 6728781625398100828
+      bakcground_day1_21: -3390222153762692576
+      bakcground_day1_210: 3952708932401275597
+      bakcground_day1_211: -5913204031246980001
+      bakcground_day1_212: -631994255088969036
+      bakcground_day1_213: 9083355328116307434
+      bakcground_day1_214: 9158042934481313306
+      bakcground_day1_215: -3116978312727173058
+      bakcground_day1_216: -401675858490904368
+      bakcground_day1_217: -7027871365849208330
+      bakcground_day1_218: -2618284292999202786
+      bakcground_day1_219: -1158740071961879081
+      bakcground_day1_22: -4919082682992204974
+      bakcground_day1_23: 9156951826498847826
+      bakcground_day1_24: -8599212096107219772
+      bakcground_day1_25: -2080111151456426749
+      bakcground_day1_26: 4647547097590121394
+      bakcground_day1_27: -7440629588369373787
+      bakcground_day1_28: -7073423419354821780
+      bakcground_day1_29: 4359462212374813026
+      bakcground_day1_3: 3534280251659014865
+      bakcground_day1_30: 8207521688687955642
+      bakcground_day1_31: -5696478296402827968
+      bakcground_day1_32: 7422741462956975666
+      bakcground_day1_33: 8668984928644507848
+      bakcground_day1_34: -8996402711323529000
+      bakcground_day1_35: -360409576087436189
+      bakcground_day1_36: -745345017317960407
+      bakcground_day1_37: 1809078899502280183
+      bakcground_day1_38: -5782976777456334638
+      bakcground_day1_39: 3267010978906372178
+      bakcground_day1_4: 2310435898673033141
+      bakcground_day1_40: -7642610562604944562
+      bakcground_day1_41: -8846491906381693784
+      bakcground_day1_42: -998359213113312012
+      bakcground_day1_43: 8165700569091392591
+      bakcground_day1_44: 565198911979901962
+      bakcground_day1_45: -6562405746211386765
+      bakcground_day1_46: -5973851895891279558
+      bakcground_day1_47: 4922238000581899837
+      bakcground_day1_48: 1919140805112558538
+      bakcground_day1_49: -7488468231830103364
+      bakcground_day1_5: 5897805275154679653
+      bakcground_day1_50: -1940237867947280596
+      bakcground_day1_51: 4733020853396565195
+      bakcground_day1_52: 3408697874939981768
+      bakcground_day1_53: 3833401206887579336
+      bakcground_day1_54: 4475295013255823708
+      bakcground_day1_55: -1492521560384402386
+      bakcground_day1_56: 7440458637084620718
+      bakcground_day1_57: 678793118073668974
+      bakcground_day1_58: 3297635849056204336
+      bakcground_day1_59: -1746917693551165072
+      bakcground_day1_6: 6976456194598954575
+      bakcground_day1_60: -5456601797006509763
+      bakcground_day1_61: -833210553660200460
+      bakcground_day1_62: 5946625499358156384
+      bakcground_day1_63: -8716193614175151999
+      bakcground_day1_64: -9037780489710202628
+      bakcground_day1_65: 2590682139950369334
+      bakcground_day1_66: 6311753403458232445
+      bakcground_day1_67: 6260166678621708019
+      bakcground_day1_68: -4664588525157511101
+      bakcground_day1_69: 6695462609706167384
+      bakcground_day1_7: 1412786121455179772
+      bakcground_day1_70: 2502627479466763048
+      bakcground_day1_71: 345723935415904888
+      bakcground_day1_72: -486305145170747290
+      bakcground_day1_73: 3827223013906972960
+      bakcground_day1_74: -4935896367423902138
+      bakcground_day1_75: 7439478847474129235
+      bakcground_day1_76: 8987950232825749884
+      bakcground_day1_77: 2714619976068734737
+      bakcground_day1_78: -6323361058947459686
+      bakcground_day1_79: -7908084448480112291
+      bakcground_day1_8: -4132612628169596262
+      bakcground_day1_80: 1849968300980556430
+      bakcground_day1_81: 7329313122829929432
+      bakcground_day1_82: 6027373354808794767
+      bakcground_day1_83: -4795362040204324717
+      bakcground_day1_84: -1368971840134186693
+      bakcground_day1_85: -5735257980742368743
+      bakcground_day1_86: -5293420322181494264
+      bakcground_day1_87: -4960247875419700110
+      bakcground_day1_88: -3804148776568426247
+      bakcground_day1_89: 5477522679362161765
+      bakcground_day1_9: -3267041803985153752
+      bakcground_day1_90: -7190210389968428829
+      bakcground_day1_91: -2756275279054226862
+      bakcground_day1_92: -7426281067951220954
+      bakcground_day1_93: -4556808311526841003
+      bakcground_day1_94: -7890426820324556415
+      bakcground_day1_95: -3126607242766415176
+      bakcground_day1_96: -6394857816080129985
+      bakcground_day1_97: 8766104482911734740
+      bakcground_day1_98: -4679188333339763971
+      bakcground_day1_99: -7488113012694492088
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

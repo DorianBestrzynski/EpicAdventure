@@ -19,9 +19,6 @@ public class CharacterSelection : MonoBehaviour
 
     [SerializeField] private Toggle diffHard;
 
-    [SerializeField] private Toggle levels2;
-
-    [SerializeField] private Toggle levels4;
     // Start is called before the first frame update
 
 
@@ -33,7 +30,7 @@ public class CharacterSelection : MonoBehaviour
         StaticVariables.isPLayerOneMagician = p1Magician.isOn;
         StaticVariables.isPLayerTwoMagician = p2Magician.isOn;
         StaticVariables.isEasyMode = diffEasy.isOn;
-        StaticVariables.is2Levels = levels2.isOn;
+        StaticVariables.is2Levels = false;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
