@@ -96,12 +96,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (transform.gameObject.CompareTag("Player") && !StaticVariables.isPLayerOneMagician)
         {
-            transform.localScale = new Vector3(5f, 5f, 1);
+         //   transform.localScale = new Vector3(5f, 5f, 1);
         }
         else if (transform.gameObject.CompareTag("Player2") && !StaticVariables.isPLayerTwoMagician)
 
         {
-            transform.localScale = new Vector3(5f, 5f, 1);
+          //  transform.localScale = new Vector3(5f, 5f, 1);
         }
 
 
@@ -146,6 +146,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
      {
+        Debug.Log("maybe this is the issue");
         attackSoundEffect.Play();
         anim.SetTrigger("attack");
     }

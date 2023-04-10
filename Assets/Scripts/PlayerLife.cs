@@ -200,13 +200,14 @@ public class PlayerLife : MonoBehaviour
 
     private void RestartLevel()
     {
-        StaticVariables.isDead = false;
         StartCoroutine(Waiter());
     }
 
     private IEnumerator Waiter()
     {
         yield return new WaitForSeconds(2);
+        StaticVariables.isDead = false;
+        anim.SetBool("Loop", false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
