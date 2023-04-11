@@ -201,8 +201,6 @@ public class PlayerLife : MonoBehaviour
     private void RestartLevel()
     {
         StaticVariables.isDead = false;
-        Debug.Log("Should stop animation");
-        Debug.Log(StaticVariables.isDead);
         StartCoroutine(Waiter());
     }
 

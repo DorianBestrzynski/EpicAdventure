@@ -146,7 +146,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
      {
-        Debug.Log("maybe this is the issue");
         attackSoundEffect.Play();
         anim.SetTrigger("attack");
     }

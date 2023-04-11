@@ -17,6 +17,8 @@ public class ItemCollector : MonoBehaviour
 
     [SerializeField] private Transform player;
 
+    private bool wantToInteract;
+
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class ItemCollector : MonoBehaviour
         
 
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Pineapple"))
@@ -51,8 +54,5 @@ public class ItemCollector : MonoBehaviour
             collectionSound.Play();
             Destroy(collision.gameObject);
         }
-
     }
-
-    
 }
