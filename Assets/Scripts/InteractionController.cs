@@ -18,7 +18,7 @@ public class InteractionController : MonoBehaviour
     {
         if (DetectObject())
         {
-            Debug.Log("Collider");
+            // Debug.Log("Collider");
             if (InteractInput())
             {
                 Debug.Log("Interaction");
