@@ -114,6 +114,7 @@ public class PlayerLife : MonoBehaviour
 
         if (collision.gameObject.CompareTag("HealthPotion"))
         {
+            Debug.Log("heeeerere ");
             if ((player.gameObject.CompareTag("Player2") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player") && StaticVariables.hasSwithed))
             {
                 if (StaticVariables.playerTwoLife < 8)
@@ -166,6 +167,8 @@ public class PlayerLife : MonoBehaviour
 
         else if (collision.gameObject.CompareTag("OutOfMap"))
         {
+
+            Debug.Log("Out of map lol");
             if ((player.gameObject.CompareTag("Player2") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player") && StaticVariables.hasSwithed))
             {
                 playerOneLife.text = $"P2 Life:" + 0;

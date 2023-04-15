@@ -15,6 +15,7 @@ TagManager:
   - Cave
   - CloudPlatform
   - Quiz
+  - KnightInteract
   layers:
   - Default
   - TransparentFX
