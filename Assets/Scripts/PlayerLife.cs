@@ -181,6 +181,20 @@ public class PlayerLife : MonoBehaviour
             Die();
             Destroy(collision.gameObject);
         }
+         else if (collision.gameObject.CompareTag("JumpPotion"))
+        {
+            if ((player.gameObject.CompareTag("Player2") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player") && StaticVariables.hasSwithed))
+            {
+                StaticVariables.playerTwoJumpForce += 2f;
+
+            }
+            else
+            {
+                StaticVariables.playerOneJumpForce += 2f;
+            }
+            collectionSound.Play();
+            Destroy(collision.gameObject);
+        }
 
 
     }

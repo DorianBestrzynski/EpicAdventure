@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Transform player2;
     [SerializeField] private Camera camera;
 
-    private float maxDistance = 10;
+    private float maxDistance = 8;
 
     private void Update()
     {
