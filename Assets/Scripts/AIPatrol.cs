@@ -38,7 +38,7 @@ public class AIPatrol : MonoBehaviour
     {
         mustPatrol = true;
         canShoot = true;
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
