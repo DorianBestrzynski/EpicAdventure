@@ -15741,11 +15741,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4351787063781453140, guid: eedd0530a508458459e9d5932a67dc1a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9848078
       objectReference: {fileID: 0}
     - target: {fileID: 4351787063781453140, guid: eedd0530a508458459e9d5932a67dc1a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.17364825
       objectReference: {fileID: 0}
     - target: {fileID: 4351787063781453140, guid: eedd0530a508458459e9d5932a67dc1a, type: 3}
       propertyPath: m_LocalRotation.y
@@ -15757,7 +15757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4351787063781453140, guid: eedd0530a508458459e9d5932a67dc1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 4351787063781453140, guid: eedd0530a508458459e9d5932a67dc1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -15780,8 +15780,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 801992015}
     - target: {fileID: 4351787063781453227, guid: eedd0530a508458459e9d5932a67dc1a, type: 3}
+      propertyPath: m_TargetEye
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351787063781453227, guid: eedd0530a508458459e9d5932a67dc1a, type: 3}
+      propertyPath: m_TargetDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351787063781453227, guid: eedd0530a508458459e9d5932a67dc1a, type: 3}
       propertyPath: orthographic size
       value: 216.57736
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351787063781453227, guid: eedd0530a508458459e9d5932a67dc1a, type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eedd0530a508458459e9d5932a67dc1a, type: 3}
@@ -16379,12 +16391,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 12
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -16415,7 +16427,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0.39195818}
+  m_margin: {x: 0, y: 0, z: 0, w: 31.836971}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
