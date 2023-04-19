@@ -109,6 +109,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+        
         if ((transform.gameObject.CompareTag("Player") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player2") && StaticVariables.hasSwithed))
         {
             rb.velocity = new Vector2(dirX * StaticVariables.playerOneSpeed, rb.velocity.y);
@@ -119,16 +124,23 @@ public class PlayerMovement : MonoBehaviour
         }
 
         UpdateAnimationState();
-
-        
     }
+
     public void OnMove(InputAction.CallbackContext context)
     {
+        if(DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
         dirX = context.ReadValue<Vector2>().x;
     }
 
     public void OnJump(InputAction.CallbackContext context)
      {
+        if(DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
          if (IsGrounded())
          { 
              jumpSoundEffect.Play();
@@ -146,6 +158,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
      {
+        if(DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
         attackSoundEffect.Play();
         anim.SetTrigger("attack");
     }

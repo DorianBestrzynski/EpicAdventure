@@ -16,6 +16,8 @@ public class Dialog : MonoBehaviour
     private bool waitForNext = false;
     private bool p1detected = false;
     private bool p2detected = false;
+    [Header("Ink JSON")]
+    [SerializeField] private TextAsset inkJSON;
 
     public void setP1detected(bool isDetected)
     {
@@ -45,6 +47,7 @@ public class Dialog : MonoBehaviour
 
     public void StartDialog() 
     {
+        Debug.Log(inkJSON.text);
         if(started) 
             return;
         started = true;
