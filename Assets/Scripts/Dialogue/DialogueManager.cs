@@ -11,11 +11,13 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private GameObject choicesBackground;
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
     private Story currentStory; 
     public bool dialogueIsPlaying { get; private set; }
+    private bool lastMessage;
 
     // [Header("Ink JSON")]
     // [SerializeField] private TextAsset inkJSON;
@@ -39,8 +41,6 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Found more than one Dialogue Manager in the scene.");
         }
         instance = this;
-        // ToggleIndicator(false);
-        // ToggleWindow(false);
     }
 
     public static DialogueManager GetInstance()
@@ -51,7 +51,9 @@ public class DialogueManager : MonoBehaviour
     private void Start() 
     {
         dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);    
+        lastMessage = false;
+        dialoguePanel.SetActive(false);
+        choicesBackground.SetActive(false);    
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -59,6 +61,30 @@ public class DialogueManager : MonoBehaviour
         {
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
+        }
+    }
+
+    private void Update()
+    {
+        if(lastMessage)
+        {
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                dialogueIsPlaying = false;
+                dialoguePanel.SetActive(false);
+                dialogueText.text = "";
+                lastMessage = false;
+            }
+        }
+
+        if(!dialogueIsPlaying)
+        {
+            return;
+        }
+
+        if(currentStory.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.Space))
+        {
+            ContinueStory();
         }
     }
 
@@ -73,23 +99,12 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ExitDialogueMode()
     {
-        yield return new WaitForSeconds(0.2f);
+
+        yield return new WaitForSeconds(2f);
 
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
-    }
-
-    private void Update()
-    {
-        if(!dialogueIsPlaying)
-            return;
-
-        // if(((p1detected && Input.GetKeyDown(KeyCode.E)) || (p2detected && Input.GetKeyDown(KeyCode.RightShift))))
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            ContinueStory();
-        }
     }
 
     private void ContinueStory()
@@ -101,7 +116,10 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            StartCoroutine(ExitDialogueMode());
+            Debug.Log("Ostatnia wiadomość");
+            lastMessage = true;
+            return;
+            // StartCoroutine(ExitDialogueMode());
         }
     }
 
@@ -112,6 +130,11 @@ public class DialogueManager : MonoBehaviour
         if(currentChoices.Count > choices.Length)
         {
             Debug.LogError("More choices were given than the UI can support. Number of choices given: " + currentChoices.Count);
+        }
+
+        if(currentChoices.Count > 0)
+        {
+            choicesBackground.SetActive(true);    
         }
 
         int index = 0;
@@ -140,78 +163,7 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+        choicesBackground.SetActive(false);    
+        ContinueStory();
     }
-
-
-
-
-
-
-
-
-
-
-    // public void setP1detected(bool isDetected)
-    // {
-    //     p1detected = isDetected;
-    // }
-
-    // public void setP2detected(bool isDetected)
-    // {
-    //     p2detected = isDetected;
-    // }
-
-    // private void ToggleWindow(bool show)
-    // {
-    //     window.SetActive(show);
-    // }
-
-    // public void ToggleIndicator(bool show)
-    // {
-    //     indicator.SetActive(show);
-    // }
-
-    // public void StartDialog() 
-    // {
-    //     Debug.Log(inkJSON.text);
-    //     if(started) 
-    //         return;
-    //     started = true;
-    //     ToggleWindow(true);
-    //     ToggleIndicator(false);
-    //     GetDialog(0);
-    // }
-
-    // private void GetDialog(int i)
-    // {
-    //     dialogIndex = i;
-    //     charIndex = 0;
-    //     dialogText.text = string.Empty;
-    //     StartCoroutine(Writing());
-    // }
-
-    // public void EndDialog()
-    // {
-    //     started = false;
-    //     waitForNext = false;
-    //     StopAllCoroutines();
-    //     ToggleWindow(false);
-    // }
-
-    // IEnumerator Writing()
-    // {
-    //     yield return new WaitForSeconds(writingSpeed);
-
-    //     string currentDialog = dialogs[dialogIndex];
-    //     dialogText.text += currentDialog[charIndex];
-    //     charIndex++;
-    //     if(charIndex < currentDialog.Length) {
-    //         yield return new WaitForSeconds(writingSpeed);
-    //         StartCoroutine(Writing());   
-    //     }
-    //     else 
-    //     {
-    //         waitForNext = true;
-    //     }
-    // }
 }

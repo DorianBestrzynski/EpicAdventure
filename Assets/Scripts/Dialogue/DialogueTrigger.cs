@@ -54,9 +54,9 @@ public class DialogueTrigger : MonoBehaviour
             // Debug.Log("Both players are in the range");
         }
 
-        Debug.Log(playerDetected);
-        Debug.Log(player1Detected);
-        Debug.Log(player2Detected);
+        // Debug.Log(playerDetected);
+        // Debug.Log(player1Detected);
+        // Debug.Log(player2Detected);
     }
 
     private void OnTriggerExit2D(Collider2D collision) 
@@ -91,9 +91,9 @@ public class DialogueTrigger : MonoBehaviour
             // Debug.Log("Both players left");
         }
 
-        Debug.Log(playerDetected);
-        Debug.Log(player1Detected);
-        Debug.Log(player2Detected);
+        // Debug.Log(playerDetected);
+        // Debug.Log(player1Detected);
+        // Debug.Log(player2Detected);
     }
 
     private void Update()
@@ -101,7 +101,7 @@ public class DialogueTrigger : MonoBehaviour
         if(playerDetected && !DialogueManager.GetInstance().dialogueIsPlaying) 
         {
             visualCue.SetActive(true);
-            if((player1Detected && Input.GetKeyDown(KeyCode.E)) || (player2Detected && Input.GetKeyDown(KeyCode.RightShift)))
+            if(Input.GetKeyDown(KeyCode.Space))
             {
                 visualCue.SetActive(false);
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
