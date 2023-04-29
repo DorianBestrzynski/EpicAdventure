@@ -15,7 +15,7 @@ public class ObjectInteractions : MonoBehaviour
         if (collision.gameObject.CompareTag("KnightInteract"))
         {
             Debug.Log("Collision");
-            if (player.gameObject.CompareTag("Player"))
+            if (player.gameObject.name != "Magician")
             {
                 Debug.Log("Ddd");
                 rb.bodyType = RigidbodyType2D.Dynamic;

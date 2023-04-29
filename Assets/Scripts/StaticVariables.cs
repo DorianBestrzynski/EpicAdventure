@@ -14,9 +14,9 @@ public class StaticVariables : MonoBehaviour
 
     public static int playerTwoFinalCollectibles = 0;
 
-    public static int playerOneLife = 0;
+    public static int playerOneLife = -1;
 
-    public static int playerTwoLife = 0;
+    public static int playerTwoLife = -1;
 
     public static int bossLife = 15;
 
@@ -40,6 +40,7 @@ public class StaticVariables : MonoBehaviour
 
     public bool finalLevel = false;
 
+    public static bool hasUnlockedBetterKnight = false;
 
 
 }

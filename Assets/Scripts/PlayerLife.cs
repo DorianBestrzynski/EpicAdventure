@@ -28,24 +28,32 @@ public class PlayerLife : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         if (StaticVariables.isPLayerOneMagician)
         {
+            if(StaticVariables.playerOneLife < 1) { 
             StaticVariables.playerOneLife = magicianLifes;
+                }
         }
         else
         {
+            if(StaticVariables.playerOneLife < 1) { 
             StaticVariables.playerOneLife = knightLifes;
+                }
         }
 
         if (StaticVariables.isPLayerTwoMagician)
         {
+            if(StaticVariables.playerTwoLife < 1) { 
             StaticVariables.playerTwoLife = magicianLifes;
+                }
         }
         else
         {
+            if(StaticVariables.playerTwoLife < 1) { 
             StaticVariables.playerTwoLife = knightLifes;
+                }
         }
 
         playerOneLife.color = Color.white;
@@ -75,11 +83,19 @@ public class PlayerLife : MonoBehaviour
 
                 if (StaticVariables.playerTwoLife < 1)
                 {
+                    if(StaticVariables.playerTwoLife < 0)
+                    {
+                        StaticVariables.playerTwoLife = 0;
+                    }
                     playerTwoLife.text = "P2 Life:" + StaticVariables.playerTwoLife;
                     Die();
                 }
                 else
                 {
+                   if(StaticVariables.playerTwoLife < 0)
+                    {
+                        StaticVariables.playerTwoLife = 0;
+                    }
                     playerTwoLife.text = $"P2 Life:" + StaticVariables.playerTwoLife;
                 }
             }
@@ -96,11 +112,19 @@ public class PlayerLife : MonoBehaviour
                 }
                 if (StaticVariables.playerOneLife < 1)
                 {
+                  if(StaticVariables.playerOneLife < 0)
+                    {
+                        StaticVariables.playerOneLife = 0;
+                    }
                     playerOneLife.text = $"P1 Life:" + StaticVariables.playerOneLife;
                     Die();
                 }
                 else
                 {
+                    if(StaticVariables.playerOneLife < 0)
+                    {
+                        StaticVariables.playerOneLife = 0;
+                    }
                     playerOneLife.text = $"P1 Life:" + StaticVariables.playerOneLife;
                 }
             }
@@ -191,6 +215,56 @@ public class PlayerLife : MonoBehaviour
             else
             {
                 StaticVariables.playerOneJumpForce += 2f;
+            }
+            collectionSound.Play();
+            Destroy(collision.gameObject);
+        }
+
+          else if (collision.gameObject.CompareTag("PoisonPotion"))
+        {
+            if ((player.gameObject.CompareTag("Player2") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player") && StaticVariables.hasSwithed))
+            {
+                if(player.gameObject.name != "Magician") { 
+
+                StaticVariables.playerTwoLife--;
+                }
+                else
+                {
+                StaticVariables.playerTwoLife++;
+
+                }
+
+                 if (StaticVariables.playerTwoLife < 1)
+                {
+                    playerTwoLife.text = "P2 Life:" + StaticVariables.playerTwoLife;
+                    Die();
+                }
+                else
+                {
+                    playerTwoLife.text = $"P2 Life:" + StaticVariables.playerTwoLife;
+                }
+            }
+            else
+            {
+                if(player.gameObject.name != "Magician") { 
+
+                StaticVariables.playerOneLife--;
+                }
+                 else
+                {
+                StaticVariables.playerOneLife++;
+
+                }
+
+                if (StaticVariables.playerOneLife < 1)
+                {
+                    playerOneLife.text = $"P1 Life:" + StaticVariables.playerOneLife;
+                    Die();
+                }
+                else
+                {
+                    playerOneLife.text = $"P1 Life:" + StaticVariables.playerOneLife;
+                }
             }
             collectionSound.Play();
             Destroy(collision.gameObject);

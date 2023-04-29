@@ -11,6 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterSelection.unity
     guid: 16a8ca6c647030f48a5da755e025b78d
+  - enabled: 1
+    path: Assets/Scenes/Level_1.unity
+    guid: 1e1f137f5b9d50e4f89f9485bb7a126d
+  - enabled: 1
+    path: Assets/Scenes/Level_2.unity
+    guid: ecf19b9b2a7849a4b8f887ffa9ce48ba
+  - enabled: 1
+    path: Assets/Scenes/Level_3.unity
+    guid: f167dee67894f564ba6207c8120264b0
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: c0ce01ffdf417a44cb9315d4b8439441
   - enabled: 0
     path: Assets/Scenes/Custscene1.unity
     guid: ec58582493fac8445a7482090ff0ba5b
@@ -33,9 +45,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Custscene3.unity
     guid: 4c28647227d14914bb433907f64917e2
   - enabled: 0
-    path: Assets/Scenes/Level3.unity
-    guid: ecf19b9b2a7849a4b8f887ffa9ce48ba
-  - enabled: 0
     path: Assets/Scenes/Quiz3.unity
     guid: d50045d3fb0b218479b38c5315e41e61
   - enabled: 0
@@ -47,13 +56,4 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Custscene5.unity
     guid: 5d64240fe8c913b418672ca682f141da
-  - enabled: 1
-    path: Assets/Scenes/Level_1.unity
-    guid: 1e1f137f5b9d50e4f89f9485bb7a126d
-  - enabled: 1
-    path: Assets/Scenes/Level_2.unity
-    guid: f167dee67894f564ba6207c8120264b0
-  - enabled: 1
-    path: Assets/Scenes/EndScene.unity
-    guid: c0ce01ffdf417a44cb9315d4b8439441
   m_configObjects: {}

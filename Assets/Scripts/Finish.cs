@@ -20,9 +20,9 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.gameObject.name == "Knight" || collision.gameObject.name == "BasicKnight" || collision.gameObject.name == "Magician") && !levelCompleted)
+        if ((collision.gameObject.name == "Knight" || collision.gameObject.name == "v2BasicKnight" || collision.gameObject.name == "Magician") && !levelCompleted)
         {
-            if(collision.gameObject.name == "Knight" || collision.gameObject.name == "BasicKnight")
+            if(collision.gameObject.name == "Knight" || collision.gameObject.name == "v2BasicKnight")
             {
                 knightFinish = true;
             }
@@ -42,9 +42,9 @@ public class Finish : MonoBehaviour
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-        if ((collision.gameObject.name == "Knight" || collision.gameObject.name == "BasicKnight" || collision.gameObject.name == "Magician") && !levelCompleted)
+        if ((collision.gameObject.name == "Knight" || collision.gameObject.name == "v2BasicKnight" || collision.gameObject.name == "Magician") && !levelCompleted)
         {
-            if(collision.gameObject.name == "Knight" || collision.gameObject.name == "BasicKnight")
+            if(collision.gameObject.name == "Knight" || collision.gameObject.name == "v2BasicKnight")
             {
                 knightFinish = false;
             }

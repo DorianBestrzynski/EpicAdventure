@@ -17,6 +17,7 @@ TagManager:
   - Quiz
   - KnightInteract
   - JumpPotion
+  - PoisonPotion
   layers:
   - Default
   - TransparentFX
