@@ -18,8 +18,10 @@ public class KnightSkinChange : MonoBehaviour
         if(StaticVariables.hasUnlockedBetterKnight)
         {
             animator.runtimeAnimatorController = advancedKnight;
-            transform.localScale = new Vector3(6, 8, 1);
-            transform.position = new Vector3(transform.position.x, transform.position.y - 0.05f, transform.position.z); // adjust the position to align with previous Animator Controller
+            transform.localScale = new Vector3(6, 7, 1);
+            Vector3 newPosition = transform.localPosition;
+            newPosition.y = -1.3f; 
+            transform.localPosition = newPosition;
         }
         else
         {
