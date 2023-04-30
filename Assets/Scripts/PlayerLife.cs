@@ -25,35 +25,42 @@ public class PlayerLife : MonoBehaviour
 
     [SerializeField] private AudioSource collectionSound;
 
+    private bool dying;
     // Start is called before the first frame update
     private void Start()
     {
+        dying = false;
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         if (StaticVariables.isPLayerOneMagician)
         {
-            if(StaticVariables.playerOneLife < 1) { 
+            if(StaticVariables.playerOneLife < 1 || StaticVariables.hasRestartedLevel) { 
             StaticVariables.playerOneLife = magicianLifes;
                 }
         }
         else
         {
-            if(StaticVariables.playerOneLife < 1) { 
+            if(StaticVariables.playerOneLife < 1 || StaticVariables.hasRestartedLevel) { 
             StaticVariables.playerOneLife = knightLifes;
                 }
         }
 
         if (StaticVariables.isPLayerTwoMagician)
         {
-            if(StaticVariables.playerTwoLife < 1) { 
+            if(StaticVariables.playerTwoLife < 1 || StaticVariables.hasRestartedLevel) { 
             StaticVariables.playerTwoLife = magicianLifes;
                 }
         }
         else
         {
-            if(StaticVariables.playerTwoLife < 1) { 
+            if(StaticVariables.playerTwoLife < 1 || StaticVariables.hasRestartedLevel) { 
             StaticVariables.playerTwoLife = knightLifes;
                 }
+        }
+
+        if (StaticVariables.hasRestartedLevel)
+        {
+            StaticVariables.hasRestartedLevel = false;
         }
 
         playerOneLife.color = Color.white;
@@ -88,6 +95,8 @@ public class PlayerLife : MonoBehaviour
                         StaticVariables.playerTwoLife = 0;
                     }
                     playerTwoLife.text = "P2 Life:" + StaticVariables.playerTwoLife;
+                    StaticVariables.playerTwoDeathsOnLevel++;
+
                     Die();
                 }
                 else
@@ -117,6 +126,8 @@ public class PlayerLife : MonoBehaviour
                         StaticVariables.playerOneLife = 0;
                     }
                     playerOneLife.text = $"P1 Life:" + StaticVariables.playerOneLife;
+                    StaticVariables.playerOneDeathsOnLevel++;
+ 
                     Die();
                 }
                 else
@@ -195,13 +206,16 @@ public class PlayerLife : MonoBehaviour
             Debug.Log("Out of map lol");
             if ((player.gameObject.CompareTag("Player2") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player") && StaticVariables.hasSwithed))
             {
-                playerOneLife.text = $"P2 Life:" + 0;
+                playerTwoLife.text = $"P2 Life:" + 0;
+                StaticVariables.playerTwoDeathsOnLevel++;
             }
             else
             {
                 playerOneLife.text = $"P1 Life:" + 0;
+                StaticVariables.playerOneDeathsOnLevel++;
             }
             deathSound.Play();
+
             Die();
             Destroy(collision.gameObject);
         }
@@ -269,8 +283,87 @@ public class PlayerLife : MonoBehaviour
             collectionSound.Play();
             Destroy(collision.gameObject);
         }
+    }
+
+     private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyTrap"))
+        {
+                  if (!dying) { 
+            if(StaticVariables.playerTwoLife == 0 || StaticVariables.playerOneLife == 0)
+            {
+
+            }
+            else { 
+            DieSound();
+                }
+
+            if ((player.gameObject.CompareTag("Player2") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player") && StaticVariables.hasSwithed))
+            {
+                Debug.Log("Trigger health P2" + StaticVariables.isEasyMode);
+                if (StaticVariables.isEasyMode)
+                {
+                    StaticVariables.playerTwoLife--;
+                }
+                else
+                {
+                    StaticVariables.playerTwoLife -= 2;
+                }
 
 
+                if (StaticVariables.playerTwoLife < 1)
+                {
+                    if(StaticVariables.playerTwoLife < 0)
+                    {
+                        StaticVariables.playerTwoLife = 0;
+                    }
+                    playerTwoLife.text = "P2 Life:" + StaticVariables.playerTwoLife;
+                    dying =true;
+                    StaticVariables.playerTwoDeathsOnLevel++;
+                    Die();
+                }
+                else
+                {
+                   if(StaticVariables.playerTwoLife < 0)
+                    {
+                        StaticVariables.playerTwoLife = 0;
+                    }
+                    playerTwoLife.text = $"P2 Life:" + StaticVariables.playerTwoLife;
+                }
+            }
+            else 
+            {
+                Debug.Log("Trigger health P1 " + StaticVariables.isEasyMode);
+                if (StaticVariables.isEasyMode)
+                {
+                    StaticVariables.playerOneLife--;
+                }
+                else
+                {
+                    StaticVariables.playerOneLife -= 2;
+                }
+                if (StaticVariables.playerOneLife < 1)
+                {
+                  if(StaticVariables.playerOneLife < 0)
+                    {
+                        StaticVariables.playerOneLife = 0;
+                    }
+                    playerOneLife.text = $"P1 Life:" + StaticVariables.playerOneLife;
+                    dying =true;
+
+                    Die();
+                }
+                else
+                {
+                    if(StaticVariables.playerOneLife < 0)
+                    {
+                        StaticVariables.playerOneLife = 0;
+                    }
+                    playerOneLife.text = $"P1 Life:" + StaticVariables.playerOneLife;
+                }
+            }
+            }
+        }
     }
     
 
@@ -279,6 +372,7 @@ public class PlayerLife : MonoBehaviour
     {
         StaticVariables.playerOneCollectibles = StaticVariables.playerOneFinalCollectibles;
         StaticVariables.playerTwoCollectibles = StaticVariables.playerTwoFinalCollectibles;
+        StaticVariables.hasRestartedLevel = true;
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
         RestartLevel();
@@ -297,8 +391,18 @@ public class PlayerLife : MonoBehaviour
 
     private IEnumerator Waiter()
     {
+        Debug.Log("Aaa player1" + StaticVariables.playerOneDeathsOnLevel );
+        Debug.Log("BBB player2" + StaticVariables.playerTwoDeathsOnLevel );
+        Debug.Log("BEasy level" + !StaticVariables.isEasyMode );
         yield return new WaitForSeconds(2);
+        if((StaticVariables.playerOneDeathsOnLevel > 1 || StaticVariables.playerTwoDeathsOnLevel > 1) && !StaticVariables.isEasyMode)
+        {
+            Debug.Log("Please be here");
+            SceneManager.LoadScene(2);
+        }
+        else { 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
 
     }
 }

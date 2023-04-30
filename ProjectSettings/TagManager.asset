@@ -18,6 +18,8 @@ TagManager:
   - KnightInteract
   - JumpPotion
   - PoisonPotion
+  - Beer
+  - EnemyTrap
   layers:
   - Default
   - TransparentFX

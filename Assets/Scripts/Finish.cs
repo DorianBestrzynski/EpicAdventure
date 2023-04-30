@@ -61,6 +61,8 @@ public class Finish : MonoBehaviour
         StaticVariables.playerTwoFinalCollectibles = StaticVariables.playerTwoCollectibles;
         StaticVariables.playerOneCollectibles = StaticVariables.playerOneFinalCollectibles;
         StaticVariables.playerTwoCollectibles = StaticVariables.playerTwoFinalCollectibles;
+        StaticVariables.playerOneDeathsOnLevel = 0;
+        StaticVariables.playerTwoDeathsOnLevel =0;
 
         if (StaticVariables.is2Levels && SceneManager.GetActiveScene().buildIndex == 7)
         {

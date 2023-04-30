@@ -42,5 +42,9 @@ public class StaticVariables : MonoBehaviour
 
     public static bool hasUnlockedBetterKnight = false;
 
+    public static bool hasRestartedLevel = false;
 
+    public static int playerOneDeathsOnLevel = 0;
+
+    public static int playerTwoDeathsOnLevel = 0;
 }

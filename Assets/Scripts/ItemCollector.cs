@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
-    private int pineapplesPlayer1;
+    private int beersPlayer1;
 
-    private int pineapplesPlayer2;
+    private int beersPlayer2;
 
-    [SerializeField] private Text pineappleText1;
+    [SerializeField] private Text beerText1;
 
-    [SerializeField] private Text pineappleText2;
+    [SerializeField] private Text beerText2;
 
     [SerializeField] private AudioSource collectionSound;
 
@@ -22,34 +22,34 @@ public class ItemCollector : MonoBehaviour
 
     private void Start()
     {
-        pineapplesPlayer1 = StaticVariables.playerOneCollectibles;
-        pineapplesPlayer2 = StaticVariables.playerTwoCollectibles;
-        pineappleText1.color = Color.white;
-        pineappleText2.color = Color.white;
-        //pineappleText2.text = $"Pineapples P2:" + pineapplesPlayer2;
-       // pineappleText1.text = $"Pineapples P1:" + pineapplesPlayer1;
+        beersPlayer1 = StaticVariables.playerOneCollectibles;
+        beersPlayer2 = StaticVariables.playerTwoCollectibles;
+        beerText1.color = Color.white;
+        beerText2.color = Color.white;
+        beerText2.text = $"Beers P2:" + beersPlayer2;
+        beerText1.text = $"Beers P1:" + beersPlayer1;
         
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Pineapple"))
+        if (collision.gameObject.CompareTag("Beer"))
         {
 
             if ((player.gameObject.CompareTag("Player2") && !StaticVariables.hasSwithed ) || (transform.gameObject.CompareTag("Player") && StaticVariables.hasSwithed))
             {
-                pineapplesPlayer2++;
-                StaticVariables.playerTwoCollectibles = pineapplesPlayer2;
-                //pineappleText2.text = $"Pineapples P2:" + pineapplesPlayer2;
-                Debug.Log("Player2" + pineapplesPlayer2);
+                beersPlayer2++;
+                StaticVariables.playerTwoCollectibles = beersPlayer2;
+                beerText2.text = $"Beers P2:" + beersPlayer2;
+                Debug.Log("Player2" + beersPlayer2);
             }
             else
             {
-                pineapplesPlayer1++;
-                StaticVariables.playerOneCollectibles = pineapplesPlayer1;
-                //pineappleText1.text = $"Pineapples P1:" + pineapplesPlayer1;
-                Debug.Log("Player1" + pineapplesPlayer1);
+                beersPlayer1++;
+                StaticVariables.playerOneCollectibles = beersPlayer1;
+                beerText1.text = $"Beers P1:" + beersPlayer1;
+                Debug.Log("Player1" + beersPlayer1);
             }
             collectionSound.Play();
             Destroy(collision.gameObject);
