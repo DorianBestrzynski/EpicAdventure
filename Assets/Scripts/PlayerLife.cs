@@ -391,13 +391,9 @@ public class PlayerLife : MonoBehaviour
 
     private IEnumerator Waiter()
     {
-        Debug.Log("Aaa player1" + StaticVariables.playerOneDeathsOnLevel );
-        Debug.Log("BBB player2" + StaticVariables.playerTwoDeathsOnLevel );
-        Debug.Log("BEasy level" + !StaticVariables.isEasyMode );
         yield return new WaitForSeconds(2);
-        if((StaticVariables.playerOneDeathsOnLevel > 1 || StaticVariables.playerTwoDeathsOnLevel > 1) && !StaticVariables.isEasyMode)
+        if((StaticVariables.playerOneDeathsOnLevel > 5 || StaticVariables.playerTwoDeathsOnLevel > 5) && !StaticVariables.isEasyMode)
         {
-            Debug.Log("Please be here");
             SceneManager.LoadScene(2);
         }
         else { 
