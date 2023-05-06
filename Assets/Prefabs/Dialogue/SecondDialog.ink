@@ -1,15 +1,17 @@
+-> main
+
+=== main ===
+Witajcie podróżnicy.
 Jakie mamy teraz zajęcia?
     + [Gry komputerowe]
-        To jest poprawna odpowiedź!
-        -> END
+        -> correct
     + [Język francuski]
-        Niestety, to była zła odpowiedź...
-        -> END
+        -> wrong
         
 === correct ===
-Let's do it.
+To jest poprawna odpowiedź!
 -> END
 
 === wrong ===
-    Don't come back...
+Niestety, to była zła odpowiedź...
 -> END

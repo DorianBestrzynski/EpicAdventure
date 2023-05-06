@@ -51,7 +51,8 @@ public class DialogueManager : MonoBehaviour
     private void Start() 
     {
         dialogueIsPlaying = false;
-        lastMessage = false;
+        // zakomentowane
+        lastMessage = false; 
         dialoguePanel.SetActive(false);
         choicesBackground.SetActive(false);    
 
@@ -66,10 +67,12 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+        //zakomentowane
         if(lastMessage)
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
+                Debug.Log("Powinno zakończyć dialog.");
                 dialogueIsPlaying = false;
                 dialoguePanel.SetActive(false);
                 dialogueText.text = "";
@@ -93,8 +96,9 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
-
-        ContinueStory();
+        // ContinueStory();
+        Debug.Log("Rozpoczynamy dialog");
+        dialogueText.text = currentStory.currentText;
     }
 
     private IEnumerator ExitDialogueMode()
@@ -109,6 +113,17 @@ public class DialogueManager : MonoBehaviour
 
     private void ContinueStory()
     {
+        // if(currentStory.canContinue)
+        // {
+        //     dialogueText.text = currentStory.Continue();
+        //     DisplayChoices(); 
+        // }
+        // else
+        // {
+        //     StartCoroutine(ExitDialogueMode());
+        // }
+
+// zakomentowane
         if(currentStory.canContinue)
         {
             dialogueText.text = currentStory.Continue();
