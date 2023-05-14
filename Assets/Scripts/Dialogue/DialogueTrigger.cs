@@ -13,6 +13,7 @@ public class DialogueTrigger : MonoBehaviour
     private bool playerDetected;
     private bool player1Detected = false;
     private bool player2Detected = false;
+    private bool isFirstInteraction = true;
 
 
     private void Awake() 
@@ -23,6 +24,10 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
+        if(!isFirstInteraction) {
+            return;
+        }
+
         if(collision.tag == "Player")
         {
             playerDetected = true;
@@ -98,13 +103,14 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if(playerDetected && !DialogueManager.GetInstance().dialogueIsPlaying) 
+        if(playerDetected && !DialogueManager.GetInstance().dialogueIsPlaying && isFirstInteraction) 
         {
             visualCue.SetActive(true);
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 visualCue.SetActive(false);
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                isFirstInteraction = false;
             }
         }
         else 

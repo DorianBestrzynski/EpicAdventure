@@ -8,12 +8,16 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Transform player2;
     [SerializeField] private Camera camera;
+    // [SerializeField] private GameObject player;
+    // [SerializeField] private GameObject player2;
 
     private float maxDistance = 8;
+    private float minSize = 10f;
+    private float maxSize = 40f;
+    public float smoothTime = 0.2f;  
 
     private void Update()
     {
-       
         float dist = Math.Abs(Vector3.Distance(player.position, player2.position));
 
         transform.position = new Vector3((player.position.x + player2.position.x) / 2,
@@ -34,7 +38,17 @@ public class CameraController : MonoBehaviour
         { 
             camera.orthographicSize = 40f;
         }
-
-
     }
+    // private void Update()
+    // {
+    //     Vector3 distanceVector = player.position - player2.position;
+    //     float distance = distanceVector.magnitude;
+    //             Debug.Log(distance);
+
+
+    //     float desiredOrthoSize = Mathf.Lerp(minSize, maxSize, distance / maxDistance);
+    //     Debug.Log(desiredOrthoSize);
+
+    //     camera.orthographicSize = desiredOrthoSize;
+    // }
 }
