@@ -82,6 +82,7 @@ public class BossController : MonoBehaviour
     private void ShootingAction(Transform player)
     {
         rb.velocity = Vector2.zero;
+        anim.SetBool("isMoving", false);
         if (canShoot && !StaticVariables.isDead)
         {
             StartCoroutine(Attack());
@@ -115,7 +116,7 @@ public class BossController : MonoBehaviour
         GameObject newBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
         newBullet.transform.localScale = new Vector2(newBullet.transform.localScale.x * isPositive(transform.localScale.x) * -1, newBullet.transform.localScale.y);
 
-        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * isPositive(newBullet.transform.localScale.x) * Time.deltaTime, 0.1f);
+        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed * 20 * isPositive(newBullet.transform.localScale.x) * Time.deltaTime, 0.1f);
         anim.SetBool("isMoving", false);
         yield return new WaitForSeconds(timeBtwShots);
         anim.SetBool("isMoving", true);
@@ -147,7 +148,6 @@ public class BossController : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(transform.position, cavePos.position, walkSpeed * Time.deltaTime);
         float dist = Vector3.Distance(transform.position, cavePos.position);
-        Debug.Log("Distane to cave" + dist);
         if (dist < 3f)
         {
             if (StaticVariables.bossLife < 10)

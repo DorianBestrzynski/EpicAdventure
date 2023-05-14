@@ -29,6 +29,8 @@ public class HarmBoss : MonoBehaviour
 
     public void Attack()
     {
+       Debug.Log("Attack method");
+
         Vector3 pos = transform.position;
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask) ;
         if (colInfo != null)
@@ -36,22 +38,29 @@ public class HarmBoss : MonoBehaviour
             StartCoroutine(Hurt());
             if (transform.gameObject.name == "Magician")
             {
-
+                Debug.Log("taken life from boss");
                 StaticVariables.bossLife -= attackDamageMagician;
+                Debug.Log("Boos life: " + StaticVariables.bossLife);
             }
             else
             {
+                Debug.Log("taken life from boss");
+
                 StaticVariables.bossLife -= attackDamageKnight;
+                Debug.Log("Boos life: " + StaticVariables.bossLife);
+
             }
 
                 healthBar.value = StaticVariables.bossLife;
 
             if (gameObject.CompareTag("Player")) 
             {
+                Debug.Log("taken life from boss");
                 StaticVariables.playerOneCollectibles = playerCollectibles + 1;
             } 
             else 
             {
+                Debug.Log("taken life from boss");
                 StaticVariables.playerTwoCollectibles = playerCollectibles + 1;
             }
         }
@@ -59,6 +68,7 @@ public class HarmBoss : MonoBehaviour
 
      IEnumerator Hurt()
     {
+        Debug.Log("Setting trigger to hurt");
         bossAnimator.SetTrigger("hurt");
         yield return new WaitForSeconds(0.3f);
 
