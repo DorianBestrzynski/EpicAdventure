@@ -40,7 +40,9 @@ public class StaticVariables : MonoBehaviour
 
     public bool finalLevel = false;
 
-    public static bool hasUnlockedBetterKnight = false;
+    public static bool hasUnlockedBetterKnight = true;
+
+    public static bool hasUnlockedBetterMagician = false;
 
     public static bool hasRestartedLevel = false;
 
