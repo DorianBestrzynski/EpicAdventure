@@ -6,8 +6,6 @@ public class HealthBarTrigger : MonoBehaviour
 {
     [Header("Health bar")]
     [SerializeField] private GameObject healthBar;
-
-    public GameObject test;
    
     private bool playerDetected;
     private bool player1Detected = false;
@@ -57,7 +55,7 @@ public class HealthBarTrigger : MonoBehaviour
     {
         if(playerDetected) 
         {
-            visualCue.SetActive(true);
+            healthBar.SetActive(true);
         }
         else 
         {

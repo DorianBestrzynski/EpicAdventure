@@ -18,6 +18,8 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory; 
     public bool dialogueIsPlaying { get; private set; }
     private bool lastMessage;
+    
+
 
     // [Header("Ink JSON")]
     // [SerializeField] private TextAsset inkJSON;
@@ -50,6 +52,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start() 
     {
+        
         dialogueIsPlaying = false;
         // zakomentowane
         lastMessage = false; 
