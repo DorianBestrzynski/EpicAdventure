@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class Level_2_DialogueEffect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void CorrectAnswer() 
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        StaticVariables.hasUnlockedBetterKnight = true;
+        StaticVariables.hasUnlockedBetterMagician = true;
     }
 }

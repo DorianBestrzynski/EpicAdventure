@@ -9,12 +9,11 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] private Slider volumeSlider;
-
     [SerializeField] private Toggle onToggle;
-
     [SerializeField] private GameObject pauseMenu;
-
     [SerializeField] private GameObject instructionsMenu;
+    [SerializeField] private GameObject pauseButton;
+    [Serializefield] private GameObject scores;
 
 
     private float previousSliderValue = 1f;
@@ -65,14 +64,14 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
-        Debug.Log("Game paused");
+        pauseButton.SetActive(false);
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
-        Debug.Log("Game resumed");
+        pauseButton.SetActive(true);
     }
 
     public void OpenInstructionsMenu()

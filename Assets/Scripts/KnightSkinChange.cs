@@ -10,8 +10,17 @@ public class KnightSkinChange : MonoBehaviour
 
     private Animator animator;
 
-    // Start is called before the first frame update
     void Start()
+    {
+        ChooseKnightSkin();
+    }
+
+    public void ChangeKnightSkin() {
+        StaticVariables.hasUnlockedBetterKnight = true;
+        ChooseKnightSkin();
+    }
+
+    public void ChooseKnightSkin()
     {
         animator = GetComponent<Animator>();
  
@@ -27,12 +36,5 @@ public class KnightSkinChange : MonoBehaviour
         {
             animator.runtimeAnimatorController = basicKnight;
         }
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

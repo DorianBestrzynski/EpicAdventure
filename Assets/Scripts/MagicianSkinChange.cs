@@ -10,8 +10,18 @@ public class MagicianSkinChange : MonoBehaviour
 
     private Animator animator;
 
-    // Start is called before the first frame update
     void Start()
+    {
+        ChooseMagicianSkin();
+    }
+
+    public void ChangeMagicianSkin()
+    {
+        StaticVariables.hasUnlockedBetterMagician = true;
+        ChooseMagicianSkin();
+    }
+
+    public void ChooseMagicianSkin()
     {
         animator = GetComponent<Animator>();
 
@@ -27,12 +37,6 @@ public class MagicianSkinChange : MonoBehaviour
         {
             animator.runtimeAnimatorController = basicMagician;
         }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 }

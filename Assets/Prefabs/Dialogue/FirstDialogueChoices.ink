@@ -7,11 +7,18 @@ Każdy dialog będzie zakończony pytaniem, na które trzeba udzielić odpowiedz
 Aby wybrać pomiędzy odpowiedziami, użyjcie strzałek góra/dół, żeby potwierdzić swój wybór kliknijcie spację.
 Nadszedł czas na pytanie, czy jesteście gotowi, aby odnalezeźć zaginiony skarb?
     + [Tak]
-        Podoba mi się to nastawienie. W prawym górnym rogu pojawił się przycisk menu pauzy. W każdym momencie możecie wstrzymać swoją przygodę, dowiedzieć się więcej o tym jak się poruszać czy dostosować muzykę. 
-        Powodzenia śmiałkowie!!!
-        -> END
+        -> correct
     + [Nie]
-        Z takim podejściem czeka Was marny koniec... Może jednak uda Wam się zmienić nastawienie i dacie radę ostatecznie zaznać chwały zdobywając skarb.
-        Aby było to łatwiejsze w prawym, górnym rogu ekranu pojawił się przycisk menu pauzy.W każdym momencie możecie wstrzymać swoją przygodę, dowiedzieć się więcej o tym jak się poruszać czy dostosować muzykę.
-        Powodzenia dobrzy ludzie...
-        -> END
+        -> wrong
+        
+=== correct ===
+.
+Podoba mi się to nastawienie. W prawym górnym rogu pojawił się przycisk menu pauzy. W każdym momencie możecie wstrzymać swoją przygodę, dowiedzieć się więcej o tym jak się poruszać czy dostosować muzykę. 
+Powodzenia śmiałkowie!!!
+-> END
+
+=== wrong ===
+Z takim podejściem czeka Was marny koniec... Może jednak uda Wam się zmienić nastawienie i dacie radę ostatecznie zaznać chwały zdobywając skarb.
+Aby było to łatwiejsze w prawym, górnym rogu ekranu pojawił się przycisk menu pauzy.W każdym momencie możecie wstrzymać swoją przygodę, dowiedzieć się więcej o tym jak się poruszać czy dostosować muzykę.
+Powodzenia dobrzy ludzie...
+-> END

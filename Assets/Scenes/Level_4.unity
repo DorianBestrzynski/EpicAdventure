@@ -16443,6 +16443,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4541979716256908312, guid: 5bbdb27bf190d244c91aba6d1edbbb43, type: 3}
   m_PrefabInstance: {fileID: 1403437301}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1407046813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4541979716256908313, guid: 5bbdb27bf190d244c91aba6d1edbbb43, type: 3}
+  m_PrefabInstance: {fileID: 1403437301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1407884956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17008,6 +17013,7 @@ MonoBehaviour:
   onToggle: {fileID: 1314976579}
   pauseMenu: {fileID: 1385748201}
   instructionsMenu: {fileID: 2025778848}
+  pauseButton: {fileID: 1407046813}
 --- !u!4 &1698495207
 Transform:
   m_ObjectHideFlags: 0
