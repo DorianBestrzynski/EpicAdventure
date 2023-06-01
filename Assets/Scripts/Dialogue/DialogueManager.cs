@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private GameObject choicesBackground;
+    [SerializeField] private GameObject scores;
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
@@ -52,7 +53,6 @@ public class DialogueManager : MonoBehaviour
 
     private void Start() 
     {
-        
         dialogueIsPlaying = false;
         // zakomentowane
         lastMessage = false; 
@@ -80,6 +80,7 @@ public class DialogueManager : MonoBehaviour
                 dialoguePanel.SetActive(false);
                 dialogueText.text = "";
                 lastMessage = false;
+                scores.SetActive(true);
             }
         }
 
@@ -96,6 +97,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
+        scores.SetActive(false);
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);

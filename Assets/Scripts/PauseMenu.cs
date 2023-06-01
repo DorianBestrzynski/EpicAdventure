@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject instructionsMenu;
     [SerializeField] private GameObject pauseButton;
-    [Serializefield] private GameObject scores;
+    [SerializeField] private GameObject scores;
 
 
     private float previousSliderValue = 1f;
@@ -65,6 +65,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
         pauseButton.SetActive(false);
+        scores.SetActive(false);
     }
 
     public void ResumeGame()
@@ -72,6 +73,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
         pauseButton.SetActive(true);
+        scores.SetActive(true);
     }
 
     public void OpenInstructionsMenu()

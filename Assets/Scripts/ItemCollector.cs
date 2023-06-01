@@ -26,8 +26,8 @@ public class ItemCollector : MonoBehaviour
         beersPlayer2 = StaticVariables.playerTwoCollectibles;
         beerText1.color = Color.white;
         beerText2.color = Color.white;
-        beerText2.text = $"Beers P2:" + beersPlayer2;
-        beerText1.text = $"Beers P1:" + beersPlayer1;
+        beerText2.text = $"Beers:" + beersPlayer2;
+        beerText1.text = $"Beers:" + beersPlayer1;
         
 
     }
@@ -41,14 +41,14 @@ public class ItemCollector : MonoBehaviour
             {
                 beersPlayer2++;
                 StaticVariables.playerTwoCollectibles = beersPlayer2;
-                beerText2.text = $"Beers P2:" + beersPlayer2;
+                beerText2.text = $"Beers:" + beersPlayer2;
                 Debug.Log("Player2" + beersPlayer2);
             }
             else
             {
                 beersPlayer1++;
                 StaticVariables.playerOneCollectibles = beersPlayer1;
-                beerText1.text = $"Beers P1:" + beersPlayer1;
+                beerText1.text = $"Beers:" + beersPlayer1;
                 Debug.Log("Player1" + beersPlayer1);
             }
             collectionSound.Play();
