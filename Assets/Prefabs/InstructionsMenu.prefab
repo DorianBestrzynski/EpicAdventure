@@ -69,8 +69,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300196, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -426,17 +426,31 @@ MonoBehaviour:
     <color=#FFFFFF>- poruszanie gracza drugiego</color>\n<color=#000000><B>spacja</B></color>
     <color=#FFFFFF>- atak gracza pierwszego</color>\n<color=#000000><B>prawy shift</B></color>
     <color=#FFFFFF>- atak gracza drugiego</color>\n\n<color=#DE002C><size=18><B>Przedmioty</B></size></color>
-    \n<color=#000000><B>Czerony eliksir</B></color> <color=#FFFFFF>- definicja</color>\n<color=#000000><B>Niebieski
-    eliksir</B></color> <color=#FFFFFF>- definicja</color>\n<color=#000000><B>Kufel
-    piwa</B></color> <color=#FFFFFF>- definicja</color>\n<color=#000000><B>Posagi</B></color>
-    <color=#FFFFFF>- przy posagu mo\u017Cliwe jest uruchomienie dialogu z zagadka,
-    kt\xF3rej rozwiazanie daje graczom dodatkowe nagrody w zale\u017Cno\u015Bci od
-    poziomu</color> \n<color=#000000><B>Misa z ogniem</B></color> <color=#FFFFFF>-
-    oznacza koniec poziomu. Obaj gracze musza by\u0107 w jej zasiegu, aby uko\u0144czy\u0107
-    poziom</color>\n<color=#000000><B>Skrzynie</B></color> <color=#FFFFFF>- mo\u017Ce
-    je przesuwa\u0107 jedynie gracz kontrolujacy posta\u0107 rycerza. Umo\u017Cliwiaja
-    przej\u015Bcie w miejsca, do kt\xF3rych gracze nie mog\u0105 doskoczy\u0107</color>\n\n<color=#DE002C><size=18><B>Dialogi</B></size></color>
-    \n<color=#000000><B>Czerony eliksir</B></color> <color=#FFFFFF>- definicja</color>\n\n<color=#DE002C><size=18><B>Fabu\u0142a</B></size></color>
+    \n<color=#000000><B>Czerwony eliksir</B></color> <color=#FFFFFF>- dodaje punkt
+    \u017Cycia</color>\n<color=#000000><B>Ciemnoniebieski eliksir</B></color> <color=#FFFFFF>-
+    dodaje szybko\u015Bci</color>\n<color=#000000><B>Jasnoniebieski eliksir</B></color>
+    <color=#FFFFFF>- dodaje rycerzowi skoczno\u015Bci</color>\n<color=#000000><B>Zielony
+    eliksir</B></color> <color=#FFFFFF>- rycerz traci punkt \u017Cycia po jego zebraniu,
+    mag zyskuje jeden punkt \u017Cycia</color>\n<color=#000000><B>Kufel piwa</B></color>
+    <color=#FFFFFF>- punkty, kt\xF3re mog\u0105 zbiera\u0107 gracze jako dodatkowy
+    element rozgrywki. Nie maj\u0105 wp\u0142ywu na gr\u0119 jedynie wprowadzaj\u0105
+    elemrnt rywalizacji</color>\n<color=#000000><B>Posagi</B></color> <color=#FFFFFF>-
+    przy posagu mo\u017Cliwe jest uruchomienie dialogu z zagadka, kt\xF3rej rozwiazanie
+    daje graczom dodatkowe nagrody w zale\u017Cno\u015Bci od poziomu</color> \n<color=#000000><B>Misa
+    z ogniem</B></color> <color=#FFFFFF>- oznacza koniec poziomu. Obaj gracze musza
+    by\u0107 w jej zasiegu, aby uko\u0144czy\u0107 poziom</color>\n<color=#000000><B>Skrzynie</B></color>
+    <color=#FFFFFF>- mo\u017Ce je przesuwa\u0107 jedynie gracz kontrolujacy posta\u0107
+    rycerza. Umo\u017Cliwiaja przej\u015Bcie w miejsca, do kt\xF3rych gracze nie
+    mog\u0105 doskoczy\u0107</color>\n\n<color=#DE002C><size=18><B>Dialogi</B></size></color>
+    \n<color=#FFFFFF>Dialogi mo\u017Cna uruchomi\u0107 przy pos\u0105gach poprzez
+    wci\u015Bni\u0119cie spacji. Aby czyta\u0107 kolejne fragmenty dialogu r\xF3wnie\u017C
+    nale\u017Cy wcisn\u0105\u0107 spacj\u0119. Ka\u017Cdy dialog jest zako\u0144czony
+    zagadk\u0105, kt\xF3rej rozwi\u0105zanie wi\u0105\u017Ce si\u0119 ze zdobyciem
+    nagrody. Rozwi\u0105zanie zagadek nie jest konieczne do uko\u0144czenia rozgrywki.
+    W momencie pojawienia si\u0119 pytania zostan\u0105 graczom przedstawione odpowiedzi.
+    Aby wybra\u0107 odpowied\u017A, nale\u017Cy u\u017Cy\u0107 strza\u0142ek g\xF3ra/d\xF3l,
+    natomiast zatwierdzenie odpowiedzi nast\u0119puje poprzez wci\u015Bni\u0119cie
+    spacji.</color>\n\n<color=#DE002C><size=18><B>Fabu\u0142a</B></size></color>
     \n<color=#FFFFFF>Pewien m\u0142ody, silny i odwa\u017Cny rycerz podczas przegl\u0105dania
     starych manuskrypt\xF3w natkn\u0105\u0142 si\u0119 na interesuj\u0105ce znalezisko.
     Dokument, o kt\xF3rym mowa, wskazywa\u0142 po\u0142o\u017Cenie skarbu, kt\xF3ry
@@ -581,8 +595,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -2}
-  m_SizeDelta: {x: 89.9844, y: 17.7018}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 84, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1484431942952907334
 CanvasRenderer:
@@ -1060,7 +1074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1090,8 +1104,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1484431942077717161}
   m_HandleRect: {fileID: 1484431942077717160}
   m_Direction: 2
-  m_Value: 1.0000008
-  m_Size: 0.25910863
+  m_Value: 1.0000006
+  m_Size: 0.19728974
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
