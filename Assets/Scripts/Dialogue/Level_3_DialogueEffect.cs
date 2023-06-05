@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Level_3_DialogueEffect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject[] bonusBeers;
+
+    public void Start() 
     {
-        
+        int index = 0;
+        foreach(GameObject beer in bonusBeers)
+        {
+            beer.SetActive(false);
+            index++;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CorrectAnswer() 
     {
-        
+        int index = 0;
+        foreach(GameObject beer in bonusBeers)
+        {
+            beer.SetActive(true);
+            index++;
+        }
     }
 }

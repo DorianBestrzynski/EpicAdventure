@@ -1,17 +1,25 @@
 -> main
 
 === main ===
-Witajcie podróżnicy.
-Zbliża się koniec podróży.
-    + [Super]
+Koniec podróży jest coraz bliżej. Mam nadzieję, że jest to dla Was powód do dumy i radości.
+Jak dobrze wiadomo, piwo to napój wyjątkowy, na swojej drodze mogliście natknąć się na wiele sztuk tego złocistego trunku.
+Pytanie to będzie dotyczyło właśnie piwa: Które z wymienionych rodzajów piwa należy do piw dolnej fermentacji?
+    + [Stout]
+        -> wrong
+    + [Porter bałtycki]
         -> correct
-    + [Niedobrze]
+    + [IPA]
         -> wrong
         
 === correct ===
-To jest poprawna odpowiedź!
+Wyglądacie na prawdziwych koneserów piwa, co potwierdza Wasza poprawną odpowiedź.
+W nagrodę na całym poziomie pojawiło się 10 dodatkowych kufli piwa do zebrania, to tyle co powinniście wiedzieć. Zrobicie z tą wiedzą co chcecie.
+Wypijcie piwo, żeby odpowiednio nawodnić się przed walką z potworem, która coraz bliżej...
 -> END
 
 === wrong ===
-Niestety, to była zła odpowiedź...
+Niestety...
+Porter Bałtycki jest piwem dolnej fermentacji.
+Szkoda, że pomyliliście się, bo w przeciwnym wypadku zostalibyście wynagrodzeni złotym trunkiem. 
+Nie martwcie sięjednak, odpocznijcie, zbierzcie siły i ruszajcie w drogę, ponieważ skarb coraz bliżej.
 -> END
