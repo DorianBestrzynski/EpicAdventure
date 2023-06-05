@@ -450,7 +450,7 @@ MonoBehaviour:
     W momencie pojawienia si\u0119 pytania zostan\u0105 graczom przedstawione odpowiedzi.
     Aby wybra\u0107 odpowied\u017A, nale\u017Cy u\u017Cy\u0107 strza\u0142ek g\xF3ra/d\xF3l,
     natomiast zatwierdzenie odpowiedzi nast\u0119puje poprzez wci\u015Bni\u0119cie
-    spacji.</color>\n\n<color=#DE002C><size=18><B>Fabu\u0142a</B></size></color>
+    klawisza ENTER.</color>\n\n<color=#DE002C><size=18><B>Fabu\u0142a</B></size></color>
     \n<color=#FFFFFF>Pewien m\u0142ody, silny i odwa\u017Cny rycerz podczas przegl\u0105dania
     starych manuskrypt\xF3w natkn\u0105\u0142 si\u0119 na interesuj\u0105ce znalezisko.
     Dokument, o kt\xF3rym mowa, wskazywa\u0142 po\u0142o\u017Cenie skarbu, kt\xF3ry
@@ -1104,8 +1104,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1484431942077717161}
   m_HandleRect: {fileID: 1484431942077717160}
   m_Direction: 2
-  m_Value: 1.0000006
-  m_Size: 0.19728974
+  m_Value: 1.0000008
+  m_Size: 0.5353438
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
