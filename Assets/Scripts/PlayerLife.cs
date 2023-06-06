@@ -189,15 +189,22 @@ public class PlayerLife : MonoBehaviour
         {
             if ((player.gameObject.CompareTag("Player2") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player") && StaticVariables.hasSwithed))
             {
-                StaticVariables.playerTwoSpeed += 5f;
-
+                if(StaticVariables.isPLayerOneMagician)
+                {
+                    collectionSound.Play();
+                    Destroy(collision.gameObject);
+                    StaticVariables.playerTwoSpeed += 5f;
+                }
             }
             else
             {
-                StaticVariables.playerOneSpeed += 5f;
+                if(StaticVariables.isPLayerTwoMagician)
+                {
+                    collectionSound.Play();
+                    Destroy(collision.gameObject);
+                    StaticVariables.playerOneSpeed += 5f;
+                }
             }
-            collectionSound.Play();
-            Destroy(collision.gameObject);
         }
 
         else if (collision.gameObject.CompareTag("OutOfMap"))
@@ -223,15 +230,22 @@ public class PlayerLife : MonoBehaviour
         {
             if ((player.gameObject.CompareTag("Player2") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player") && StaticVariables.hasSwithed))
             {
-                StaticVariables.playerTwoJumpForce += 2f;
-
+                if(StaticVariables.isPLayerOneMagician)
+                {
+                    collectionSound.Play();
+                    Destroy(collision.gameObject);
+                    StaticVariables.playerTwoJumpForce += 2f;
+                }
             }
             else
             {
-                StaticVariables.playerOneJumpForce += 2f;
+                if(StaticVariables.isPLayerTwoMagician)
+                {
+                    collectionSound.Play();
+                    Destroy(collision.gameObject);
+                    StaticVariables.playerOneJumpForce += 2f;
+                }
             }
-            collectionSound.Play();
-            Destroy(collision.gameObject);
         }
 
           else if (collision.gameObject.CompareTag("PoisonPotion"))
