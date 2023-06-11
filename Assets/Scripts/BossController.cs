@@ -130,11 +130,11 @@ public class BossController : MonoBehaviour
 
         if (StaticVariables.playerOneCollectibles > StaticVariables.playerTwoCollectibles)
         {
-            SceneManager.LoadScene("Custscene4");
+            SceneManager.LoadScene(6);
         } 
         else
         { 
-            SceneManager.LoadScene("Custscene5");
+            SceneManager.LoadScene(6);
         }
     }
 
