@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Level_2_DialogueEffect : MonoBehaviour
 {
+
+    private void Start()
+    {
+        StaticVariables.hasUnlockedBetterKnight = false;
+        StaticVariables.hasUnlockedBetterMagician = false;  
+    }
+
     public void CorrectAnswer() 
     {
         StaticVariables.hasUnlockedBetterKnight = true;
