@@ -408,7 +408,7 @@ public class PlayerLife : MonoBehaviour
         yield return new WaitForSeconds(2);
         if((StaticVariables.playerOneDeathsOnLevel > 5 || StaticVariables.playerTwoDeathsOnLevel > 5) && !StaticVariables.isEasyMode)
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
         }
         else { 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

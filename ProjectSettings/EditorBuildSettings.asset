@@ -27,8 +27,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_3.unity
     guid: f167dee67894f564ba6207c8120264b0
   - enabled: 1
+    path: Assets/Scenes/BeforeBossCutScene.unity
+    guid: d99621c2098cd5b40a1226a6d6792ba5
+  - enabled: 1
     path: Assets/Scenes/Level_4.unity
     guid: 48358e34508596945ab50ae8b4d6a51e
+  - enabled: 1
+    path: Assets/Scenes/BeatingBossScene.unity
+    guid: 5bc27f65bed85dd429b52f8ffd793e20
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: c0ce01ffdf417a44cb9315d4b8439441
