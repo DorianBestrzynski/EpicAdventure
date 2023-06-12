@@ -403,7 +403,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Completed
+  m_Text: "Gra Uko\u0144czona!"
 --- !u!222 &854197641
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -548,8 +548,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37, y: 7}
-  m_SizeDelta: {x: 426.0027, y: 34.0714}
+  m_AnchoredPosition: {x: 7, y: 6}
+  m_SizeDelta: {x: 239.179, y: 34.0714}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1204741525
 MonoBehaviour:
@@ -584,7 +584,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Thanks for playing!
+  m_Text: Gratulacje!
 --- !u!222 &1204741526
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -890,7 +890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play Again
+  m_Text: Zagraj jeszcze raz
 --- !u!222 &2021909617
 CanvasRenderer:
   m_ObjectHideFlags: 0

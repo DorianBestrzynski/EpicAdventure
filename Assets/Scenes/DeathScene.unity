@@ -194,7 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game Over!
+  m_Text: Koniec Gry!
 --- !u!222 &14600040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play Again
+  m_Text: Zagraj jeszcze raz
 --- !u!222 &177546459
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -454,8 +454,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.196, y: -39}
-  m_SizeDelta: {x: 740.9005, y: 130.8813}
+  m_AnchoredPosition: {x: 25, y: -39}
+  m_SizeDelta: {x: 822.5443, y: 130.8813}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332847080
 MonoBehaviour:
@@ -490,8 +490,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You died to many times on this level. \n\n\nYou  might consider switching
-    difficulty to easy!"
+  m_Text: "Umra\u0142e\u015B zbyt wiele razy na tym poziomie. \n\n\nRozwa\u017C zmian\u0119
+    trudno\u015Bci gry na \u0142atwy!"
 --- !u!222 &1332847081
 CanvasRenderer:
   m_ObjectHideFlags: 0
