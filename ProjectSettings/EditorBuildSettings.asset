@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/CharacterSelection.unity
     guid: 16a8ca6c647030f48a5da755e025b78d
   - enabled: 1
+    path: Assets/Scenes/MainCutscene.unity
+    guid: 4c1723477ecd62f478e7bd76d06b5188
+  - enabled: 1
+    path: Assets/Scenes/CharactersMeetCutscene.unity
+    guid: 0a65baab367bf084684898295aa9baf1
+  - enabled: 1
     path: Assets/Scenes/Level_1.unity
     guid: 1e1f137f5b9d50e4f89f9485bb7a126d
   - enabled: 1
