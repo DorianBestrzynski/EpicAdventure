@@ -703,10 +703,10 @@ MonoBehaviour:
   textComponentP2: {fileID: 1767594595}
   lines:
   - "Haahah uda\u0142o nam si\u0119!"
-  - "To prawda. W ko\u0144cu wszystkie bogactwa sa nasze. Popatrz ile tego jest!"
+  - "To prawda. W ko\u0144cu wszystkie bogactwa s\u0105 nasze. Popatrz ile tego jest!"
   - "A m\xF3wi\u0105, \u017Ce najlepsza jest droga do celu... Chyba nigdy nie widzieli
     tyle z\u0142ota. Droga to by\u0142o piek\u0142o."
-  - "Zgadzam si\u0119 ale by\u0142o warto. Tylko teraz zasadnicze pytanie."
+  - "Zgadzam si\u0119, ale by\u0142o warto. Tylko teraz zasadnicze pytanie."
   - Jakie?
   - Jak my to wszystko przetransportujemy?
   textSpeed: 0.05

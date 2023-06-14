@@ -14,7 +14,7 @@ Pytanie to będzie dotyczyło właśnie piwa: Które z wymienionych rodzajów pi
 === correct ===
 Wyglądacie na prawdziwych koneserów piwa, co potwierdza Wasza poprawną odpowiedź.
 W nagrodę na całym poziomie pojawiło się 10 dodatkowych kufli piwa do zebrania, to tyle co powinniście wiedzieć. Zrobicie z tą wiedzą co chcecie.
-Wypijcie piwo, żeby odpowiednio nawodnić się przed walką z potworem, która coraz bliżej...
+Wypijcie piwo, żeby odpowiednio nawodnić się przed walką ze smokiem, która coraz bliżej...
 -> END
 
 === wrong ===

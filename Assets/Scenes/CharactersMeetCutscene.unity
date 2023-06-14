@@ -571,20 +571,20 @@ MonoBehaviour:
   textComponentP2: {fileID: 1454440952}
   lines:
   - "Cze\u015B\u0107 m\xF3j przyjacielu! Dawno si\u0119 nie widzili\u015Bmy, ale
-    mam dla ciebie propozycje nie do odrzucenia!"
+    mam dla ciebie propozycj\u0119 nie do odrzucenia!"
   - "Doprawdy? M\xF3w zatem po co\u015B przyby\u0142 do mnie taki kawa\u0142 drogi!"
-  - "Znalaz\u0142em map\u0119 z wytycznymi gdzie jest skarb! Zapewni on nam bogactwo
+  - "Znalaz\u0142em map\u0119 z wytycznymi, gdzie jest skarb! Zapewni on nam bogactwo
     i beztroskie \u017Cycie do ostatnich naszych dni!"
   - "Faktycznie brzmi to jak co\u015B na co m\xF3g\u0142bym si\u0119 skusi\u0107
     hahaha. Do\u015Bwiadczenie jednak mi podpowiada, \u017Ce zdobycie jego nie b\u0119dzie
     najprostsz\u0105 spraw\u0105."
-  - "Masz racj\u0119, ale dlategu jestem u ciebie! Tylko razem mo\u017Cemy pokona\u0107
+  - "Masz racj\u0119, ale dlatego jestem u ciebie! Tylko razem mo\u017Cemy pokona\u0107
     wszelkie przeciwno\u015Bci. Bez ciebie nie id\u0119!"
   - "Hahah wiesz, \u017Ce tylko dw\xF3ch rzeczy nie odmiawiam. Pacierza i przygody! "
   - A piwa?
   - "A no to faktycznie trzech! Nie ma co gada\u0107, ruszajmy po przygod\u0119!
-    Po drodz\u0119 mo\u017Ce na jakie\u015B piwo wst\u0105pimy co?"
-  - Nie martw sie, na naszej drodze na pewno na nie jedno natrafimy. No to ruszajmy!
+    Po drodz\u0119 mo\u017Ce na jakie\u015B piwo wst\u0105pimy, co?"
+  - "Nie martw si\u0119, na naszej drodze na pewno na niejedno natrafimy. No to ruszajmy!"
   textSpeed: 0.05
   mediumSizeVoiceP1: {fileID: 1108088664}
   shortSizeVoiceP1: {fileID: 1108088663}
@@ -1031,7 +1031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 373.1874, y: -31.3186}
+  m_AnchoredPosition: {x: 326, y: -31.3186}
   m_SizeDelta: {x: 1023.2571, y: 480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1836591958
