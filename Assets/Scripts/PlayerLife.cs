@@ -65,8 +65,8 @@ public class PlayerLife : MonoBehaviour
 
         playerOneLife.color = Color.white;
         playerTwoLife.color = Color.white;
-        playerOneLife.text = "P1 Lives:" + StaticVariables.playerOneLife;
-        playerTwoLife.text = "P2 Lives:" + StaticVariables.playerTwoLife;
+        playerOneLife.text = "P1 Życia:" + StaticVariables.playerOneLife;
+        playerTwoLife.text = "P2 Życia:" + StaticVariables.playerTwoLife;
       
     }
 
@@ -94,7 +94,7 @@ public class PlayerLife : MonoBehaviour
                     {
                         StaticVariables.playerTwoLife = 0;
                     }
-                    playerTwoLife.text = "P2 Lives:" + StaticVariables.playerTwoLife;
+                    playerTwoLife.text = "P2 Życia:" + StaticVariables.playerTwoLife;
                     StaticVariables.playerTwoDeathsOnLevel++;
 
                     Die();
@@ -105,7 +105,7 @@ public class PlayerLife : MonoBehaviour
                     {
                         StaticVariables.playerTwoLife = 0;
                     }
-                    playerTwoLife.text = $"P2 Lives:" + StaticVariables.playerTwoLife;
+                    playerTwoLife.text = $"P2 Życia:" + StaticVariables.playerTwoLife;
                 }
             }
             else 
@@ -125,7 +125,7 @@ public class PlayerLife : MonoBehaviour
                     {
                         StaticVariables.playerOneLife = 0;
                     }
-                    playerOneLife.text = $"P1 Lives:" + StaticVariables.playerOneLife;
+                    playerOneLife.text = $"P1 Życia:" + StaticVariables.playerOneLife;
                     StaticVariables.playerOneDeathsOnLevel++;
  
                     Die();
@@ -136,7 +136,7 @@ public class PlayerLife : MonoBehaviour
                     {
                         StaticVariables.playerOneLife = 0;
                     }
-                    playerOneLife.text = $"P1 Lives:" + StaticVariables.playerOneLife;
+                    playerOneLife.text = $"P1 Życia:" + StaticVariables.playerOneLife;
                 }
             }
 
@@ -163,7 +163,7 @@ public class PlayerLife : MonoBehaviour
                         StaticVariables.playerTwoLife ++;
                     }
 
-                    playerTwoLife.text = $"P2 Lives:" + StaticVariables.playerTwoLife;
+                    playerTwoLife.text = $"P2 Życia:" + StaticVariables.playerTwoLife;
                 }
             }
             else
@@ -178,7 +178,7 @@ public class PlayerLife : MonoBehaviour
                     {
                         StaticVariables.playerOneLife++;
                     }
-                    playerOneLife.text = $"P1 Lives:" + StaticVariables.playerOneLife;
+                    playerOneLife.text = $"P1 Życia:" + StaticVariables.playerOneLife;
                     }
                 }
             collectionSound.Play();
@@ -213,12 +213,12 @@ public class PlayerLife : MonoBehaviour
             Debug.Log("Out of map lol");
             if ((player.gameObject.CompareTag("Player2") && !StaticVariables.hasSwithed) || (transform.gameObject.CompareTag("Player") && StaticVariables.hasSwithed))
             {
-                playerTwoLife.text = $"P2 Lives:" + 0;
+                playerTwoLife.text = $"P2 Życia:" + 0;
                 StaticVariables.playerTwoDeathsOnLevel++;
             }
             else
             {
-                playerOneLife.text = $"P1 Lives:" + 0;
+                playerOneLife.text = $"P1 Życia:" + 0;
                 StaticVariables.playerOneDeathsOnLevel++;
             }
             deathSound.Play();
@@ -264,12 +264,12 @@ public class PlayerLife : MonoBehaviour
 
                  if (StaticVariables.playerTwoLife < 1)
                 {
-                    playerTwoLife.text = "P2 Lives:" + StaticVariables.playerTwoLife;
+                    playerTwoLife.text = "P2 Życia:" + StaticVariables.playerTwoLife;
                     Die();
                 }
                 else
                 {
-                    playerTwoLife.text = $"P2 Lives:" + StaticVariables.playerTwoLife;
+                    playerTwoLife.text = $"P2 Życia:" + StaticVariables.playerTwoLife;
                 }
             }
             else
@@ -286,12 +286,12 @@ public class PlayerLife : MonoBehaviour
 
                 if (StaticVariables.playerOneLife < 1)
                 {
-                    playerOneLife.text = $"P1 Lives:" + StaticVariables.playerOneLife;
+                    playerOneLife.text = $"P1 Życia:" + StaticVariables.playerOneLife;
                     Die();
                 }
                 else
                 {
-                    playerOneLife.text = $"P1 Lives:" + StaticVariables.playerOneLife;
+                    playerOneLife.text = $"P1 Życia:" + StaticVariables.playerOneLife;
                 }
             }
             collectionSound.Play();
@@ -331,7 +331,7 @@ public class PlayerLife : MonoBehaviour
                     {
                         StaticVariables.playerTwoLife = 0;
                     }
-                    playerTwoLife.text = "P2 Lives:" + StaticVariables.playerTwoLife;
+                    playerTwoLife.text = "P2 Życia:" + StaticVariables.playerTwoLife;
                     dying =true;
                     StaticVariables.playerTwoDeathsOnLevel++;
                     Die();
@@ -342,7 +342,7 @@ public class PlayerLife : MonoBehaviour
                     {
                         StaticVariables.playerTwoLife = 0;
                     }
-                    playerTwoLife.text = $"P2 Lives:" + StaticVariables.playerTwoLife;
+                    playerTwoLife.text = $"P2 Życia:" + StaticVariables.playerTwoLife;
                 }
             }
             else 
@@ -362,7 +362,7 @@ public class PlayerLife : MonoBehaviour
                     {
                         StaticVariables.playerOneLife = 0;
                     }
-                    playerOneLife.text = $"P1 Lives:" + StaticVariables.playerOneLife;
+                    playerOneLife.text = $"P1 Życia:" + StaticVariables.playerOneLife;
                     dying =true;
 
                     Die();
@@ -373,7 +373,7 @@ public class PlayerLife : MonoBehaviour
                     {
                         StaticVariables.playerOneLife = 0;
                     }
-                    playerOneLife.text = $"P1 Lives:" + StaticVariables.playerOneLife;
+                    playerOneLife.text = $"P1 Życia:" + StaticVariables.playerOneLife;
                 }
             }
             }

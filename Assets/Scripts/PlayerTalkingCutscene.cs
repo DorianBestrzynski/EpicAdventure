@@ -16,6 +16,9 @@ public class PlayerTalkingCutscene : MonoBehaviour
     [SerializeField] private AudioSource shortSizeVoiceP1;
     [SerializeField] private AudioSource mediumSizeVoiceP2;
     [SerializeField] private AudioSource shortSizeVoiceP2;
+    [SerializeField] private GameObject dialogueBg1;
+    [SerializeField] private GameObject dialogueBg2;
+
 
     private int index;
 
@@ -25,7 +28,8 @@ public class PlayerTalkingCutscene : MonoBehaviour
         textComponentP1.text = string.Empty;
         textComponentP2.text = string.Empty;
         StartDialogue();
-
+        dialogueBg1.SetActive(true);
+        dialogueBg2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -73,14 +77,12 @@ public class PlayerTalkingCutscene : MonoBehaviour
             mediumSizeVoice = mediumSizeVoiceP1;
             textComponent = textComponentP1;
             shortSizeVoice = shortSizeVoiceP1;
-            
         }
         else
         {
             mediumSizeVoice = mediumSizeVoiceP2;
             textComponent = textComponentP2;
             shortSizeVoice = shortSizeVoiceP2;
-
         }
 
 
@@ -108,6 +110,9 @@ public class PlayerTalkingCutscene : MonoBehaviour
 
     void NextLine()
     {
+        dialogueBg1.SetActive(!dialogueBg1.activeSelf);
+        dialogueBg2.SetActive(!dialogueBg2.activeSelf);
+
         TextMeshProUGUI textComponent;
         if (index % 2 == 0)
         {
