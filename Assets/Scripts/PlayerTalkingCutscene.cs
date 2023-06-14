@@ -56,6 +56,31 @@ public class PlayerTalkingCutscene : MonoBehaviour
 
             else
             {
+                var isMediumTimeVoice = lines[index].ToCharArray().Length > 40;
+                if (isMediumTimeVoice)
+                {
+                    if (index % 2 == 0)
+                    {
+
+                        mediumSizeVoiceP1.Stop();
+                    }
+                    else
+                    {
+                        mediumSizeVoiceP2.Stop();
+                    }
+                }
+                else
+                {
+                    if (index % 2 == 0)
+                    {
+
+                        shortSizeVoiceP1.Stop();
+                    }
+                    else
+                    {
+                        shortSizeVoiceP2.Stop();
+                    }
+                }
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }

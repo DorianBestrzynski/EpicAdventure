@@ -25,6 +25,8 @@ public class PlayerLife : MonoBehaviour
 
     [SerializeField] private AudioSource collectionSound;
 
+     [SerializeField] private AudioSource potionSound;
+
     private bool dying;
     // Start is called before the first frame update
     private void Start()
@@ -181,7 +183,7 @@ public class PlayerLife : MonoBehaviour
                     playerOneLife.text = $"P1 Życia:" + StaticVariables.playerOneLife;
                     }
                 }
-            collectionSound.Play();
+            potionSound.Play();
             Destroy(collision.gameObject);
 
         }
@@ -191,7 +193,7 @@ public class PlayerLife : MonoBehaviour
             {
                 if(StaticVariables.isPLayerOneMagician)
                 {
-                    collectionSound.Play();
+                    potionSound.Play();
                     Destroy(collision.gameObject);
                     StaticVariables.playerTwoSpeed += 5f;
                 }
@@ -200,7 +202,7 @@ public class PlayerLife : MonoBehaviour
             {
                 if(StaticVariables.isPLayerTwoMagician)
                 {
-                    collectionSound.Play();
+                    potionSound.Play();
                     Destroy(collision.gameObject);
                     StaticVariables.playerOneSpeed += 5f;
                 }
@@ -232,7 +234,7 @@ public class PlayerLife : MonoBehaviour
             {
                 if(StaticVariables.isPLayerOneMagician)
                 {
-                    collectionSound.Play();
+                    potionSound.Play();
                     Destroy(collision.gameObject);
                     StaticVariables.playerTwoJumpForce += 2f;
                 }
@@ -241,7 +243,7 @@ public class PlayerLife : MonoBehaviour
             {
                 if(StaticVariables.isPLayerTwoMagician)
                 {
-                    collectionSound.Play();
+                    potionSound.Play();
                     Destroy(collision.gameObject);
                     StaticVariables.playerOneJumpForce += 2f;
                 }
@@ -294,7 +296,7 @@ public class PlayerLife : MonoBehaviour
                     playerOneLife.text = $"P1 Życia:" + StaticVariables.playerOneLife;
                 }
             }
-            collectionSound.Play();
+            potionSound.Play();
             Destroy(collision.gameObject);
         }
     }

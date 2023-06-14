@@ -35,6 +35,15 @@ public class CutsceneDialog : MonoBehaviour
 
             else
             {
+                var isMediumTimeVoice = lines[index].ToCharArray().Length > 40;
+                if (isMediumTimeVoice)
+                {
+                    mediumSizeVoice.Stop();
+                }
+                else
+                {
+                    shortSizeVoice.Stop();
+                }
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }

@@ -17,8 +17,8 @@ public class BeersSummary : MonoBehaviour
 
     private void Start()
     {
-        beersPlayer1 = StaticVariables.playerOneFinalCollectibles;
-        beersPlayer2 = StaticVariables.playerTwoFinalCollectibles;
+        beersPlayer1 = StaticVariables.playerOneCollectibles;
+        beersPlayer2 = StaticVariables.playerTwoCollectibles;
         beerText1.color = Color.white;
         beerText2.color = Color.white;
         beerText1.text = $"P1 Piwa:" + beersPlayer1;
