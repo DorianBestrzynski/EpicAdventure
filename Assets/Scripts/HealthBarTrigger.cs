@@ -6,6 +6,10 @@ public class HealthBarTrigger : MonoBehaviour
 {
     [Header("Health bar")]
     [SerializeField] private GameObject healthBar;
+
+    [Header("Attack info")]
+    [SerializeField] private GameObject attackInfo;
+
    
     private bool playerDetected;
     private bool player1Detected = false;
@@ -15,7 +19,8 @@ public class HealthBarTrigger : MonoBehaviour
     private void Awake() 
     {
         playerDetected = false;
-        healthBar.SetActive(false);    
+        healthBar.SetActive(false);  
+        attackInfo.SetActive(false);  
     }
 
     private void OnTriggerEnter2D(Collider2D collision) 
@@ -56,10 +61,13 @@ public class HealthBarTrigger : MonoBehaviour
         if(playerDetected) 
         {
             healthBar.SetActive(true);
+            attackInfo.SetActive(true);  
+
         }
         else 
         {
             healthBar.SetActive(false);
+            attackInfo.SetActive(false);  
         }
     }
 }
