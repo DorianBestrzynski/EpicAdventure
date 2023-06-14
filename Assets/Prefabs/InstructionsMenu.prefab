@@ -390,7 +390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.0008544922}
+  m_AnchoredPosition: {x: 0, y: -0.0009765625}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1484431942815622935
@@ -422,28 +422,28 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<color=#DE002C><size=18><B>Sterowanie</B></size></color>\n<color=#000000><B>aswd</B></color>
-    <color=#FFFFFF>- poruszanie gracza pierwszego</color>\n<color=#000000><B>strza\u0142ki</B></color>
-    <color=#FFFFFF>- poruszanie gracza drugiego</color>\n<color=#000000><B>spacja</B></color>
-    <color=#FFFFFF>- atak gracza pierwszego</color>\n<color=#000000><B>prawy shift</B></color>
-    <color=#FFFFFF>- atak gracza drugiego</color>\n\n<color=#DE002C><size=18><B>Przedmioty</B></size></color>
-    \n<color=#000000><B>Czerwony eliksir</B></color> <color=#FFFFFF>- dodaje punkt
-    \u017Cycia</color>\n<color=#000000><B>Ciemnoniebieski eliksir</B></color> <color=#FFFFFF>-
+    <color=#2F2F2F>- poruszanie gracza pierwszego</color>\n<color=#000000><B>strza\u0142ki</B></color>
+    <color=#2F2F2F>- poruszanie gracza drugiego</color>\n<color=#000000><B>spacja</B></color>
+    <color=#2F2F2F>- atak gracza pierwszego</color>\n<color=#000000><B>prawy shift</B></color>
+    <color=#2F2F2F>- atak gracza drugiego</color>\n\n<color=#DE002C><size=18><B>Przedmioty</B></size></color>
+    \n<color=#000000><B>Czerwony eliksir</B></color> <color=#2F2F2F>- dodaje punkt
+    \u017Cycia</color>\n<color=#000000><B>Ciemnoniebieski eliksir</B></color> <color=#2F2F2F>-
     dodaje szybko\u015Bci (mo\u017Ce zosta\u0107 zebrany jedynie przez rycerza)</color>\n<color=#000000><B>Jasnoniebieski
-    eliksir</B></color> <color=#FFFFFF>- dodaje skoczno\u015Bci (mo\u017Ce zosta\u0107
+    eliksir</B></color> <color=#2F2F2F>- dodaje skoczno\u015Bci (mo\u017Ce zosta\u0107
     zebrany jedynie przez rycerza)</color>\n<color=#000000><B>Zielony eliksir</B></color>
-    <color=#FFFFFF>- trucizna - rycerz traci punkt \u017Cycia po jego zebraniu, mag
+    <color=#2F2F2F>- trucizna - rycerz traci punkt \u017Cycia po jego zebraniu, mag
     zyskuje jeden punkt \u017Cycia</color>\n<color=#000000><B>Kufel piwa</B></color>
-    <color=#FFFFFF>- punkty, kt\xF3re mog\u0105 zbiera\u0107 gracze jako dodatkowy
+    <color=#2F2F2F>- punkty, kt\xF3re mog\u0105 zbiera\u0107 gracze jako dodatkowy
     element rozgrywki. Nie maj\u0105 wp\u0142ywu na gr\u0119 jedynie wprowadzaj\u0105
-    element rywalizacji</color>\n<color=#000000><B>Posagi</B></color> <color=#FFFFFF>-
+    element rywalizacji</color>\n<color=#000000><B>Posagi</B></color> <color=#2F2F2F>-
     przy posagu mo\u017Cliwe jest uruchomienie dialogu z zagadka, kt\xF3rej rozwiazanie
     daje graczom dodatkowe nagrody w zale\u017Cno\u015Bci od poziomu</color> \n<color=#000000><B>Misa
-    z ogniem</B></color> <color=#FFFFFF>- oznacza koniec poziomu. Obaj gracze musza
+    z ogniem</B></color> <color=#2F2F2F>- oznacza koniec poziomu. Obaj gracze musza
     by\u0107 w jej zasiegu, aby uko\u0144czy\u0107 poziom</color>\n<color=#000000><B>Skrzynie</B></color>
-    <color=#FFFFFF>- mo\u017Ce je przesuwa\u0107 jedynie gracz kontrolujacy posta\u0107
+    <color=#2F2F2F>- mo\u017Ce je przesuwa\u0107 jedynie gracz kontrolujacy posta\u0107
     rycerza. Umo\u017Cliwiaja przej\u015Bcie w miejsca, do kt\xF3rych gracze nie
     mog\u0105 doskoczy\u0107</color>\n\n<color=#DE002C><size=18><B>Dialogi</B></size></color>
-    \n<color=#FFFFFF>Dialogi mo\u017Cna uruchomi\u0107 przy pos\u0105gach poprzez
+    \n<color=#2F2F2F>Dialogi mo\u017Cna uruchomi\u0107 przy pos\u0105gach poprzez
     wci\u015Bni\u0119cie spacji. Aby czyta\u0107 kolejne fragmenty dialogu r\xF3wnie\u017C
     nale\u017Cy wcisn\u0105\u0107 spacj\u0119. Ka\u017Cdy dialog jest zako\u0144czony
     zagadk\u0105, kt\xF3rej rozwi\u0105zanie wi\u0105\u017Ce si\u0119 ze zdobyciem
@@ -452,7 +452,7 @@ MonoBehaviour:
     Aby wybra\u0107 odpowied\u017A, nale\u017Cy u\u017Cy\u0107 strza\u0142ek g\xF3ra/d\xF3l,
     natomiast zatwierdzenie odpowiedzi nast\u0119puje poprzez wci\u015Bni\u0119cie
     klawisza ENTER.</color>\n\n<color=#DE002C><size=18><B>Fabu\u0142a</B></size></color>
-    \n<color=#FFFFFF>Pewien m\u0142ody, silny i odwa\u017Cny rycerz podczas przegl\u0105dania
+    \n<color=#2F2F2F>Pewien m\u0142ody, silny i odwa\u017Cny rycerz podczas przegl\u0105dania
     starych manuskrypt\xF3w natkn\u0105\u0142 si\u0119 na interesuj\u0105ce znalezisko.
     Dokument, o kt\xF3rym mowa, wskazywa\u0142 po\u0142o\u017Cenie skarbu, kt\xF3ry
     m\xF3g\u0142by uczyni\u0107 go najbogatszym cz\u0142owiekiem na \u015Bwiecie.
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 50
-  m_lineSpacing: 20
+  m_lineSpacing: 60
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -636,8 +636,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1105,8 +1105,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1484431942077717161}
   m_HandleRect: {fileID: 1484431942077717160}
   m_Direction: 2
-  m_Value: 1.0000006
-  m_Size: 0.22305602
+  m_Value: 1.0000023
+  m_Size: 0.82677794
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

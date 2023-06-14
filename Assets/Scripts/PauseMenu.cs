@@ -87,4 +87,9 @@ public class PauseMenu : MonoBehaviour
         instructionsMenu.SetActive(false);
         pauseMenu.SetActive(true);
     }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

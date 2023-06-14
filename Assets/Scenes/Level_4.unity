@@ -23695,6 +23695,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7844507872776592901, guid: 6c05aa2512c6c084e84f905278d51dd4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1698495206}
+    - target: {fileID: 7844507872776592901, guid: 6c05aa2512c6c084e84f905278d51dd4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c05aa2512c6c084e84f905278d51dd4, type: 3}
 --- !u!224 &607199063 stripped
