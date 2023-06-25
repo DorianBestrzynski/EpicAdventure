@@ -424,7 +424,7 @@ MonoBehaviour:
   m_text: "<color=#DE002C><size=18><B>Sterowanie</B></size></color>\n<color=#000000><B>aswd</B></color>
     <color=#2F2F2F>- poruszanie gracza pierwszego</color>\n<color=#000000><B>strza\u0142ki</B></color>
     <color=#2F2F2F>- poruszanie gracza drugiego</color>\n<color=#000000><B>spacja</B></color>
-    <color=#2F2F2F>- atak gracza pierwszego</color>\n<color=#000000><B>prawy shift</B></color>
+    <color=#2F2F2F>- atak gracza pierwszego</color>\n<color=#000000><B>enter</B></color>
     <color=#2F2F2F>- atak gracza drugiego</color>\n\n<color=#DE002C><size=18><B>Przedmioty</B></size></color>
     \n<color=#000000><B>Czerwony eliksir</B></color> <color=#2F2F2F>- dodaje punkt
     \u017Cycia</color>\n<color=#000000><B>Ciemnoniebieski eliksir</B></color> <color=#2F2F2F>-
@@ -1105,8 +1105,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1484431942077717161}
   m_HandleRect: {fileID: 1484431942077717160}
   m_Direction: 2
-  m_Value: 1.0000023
-  m_Size: 0.82677794
+  m_Value: 1.0000005
+  m_Size: 0.16841194
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
