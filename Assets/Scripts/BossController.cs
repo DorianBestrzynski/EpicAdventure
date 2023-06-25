@@ -46,9 +46,7 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Debug.Log(StaticVariables.bossLife);
-        if (StaticVariables.bossLife <= 0) 
+      if (StaticVariables.bossLife <= 0) 
         {
             StartCoroutine(Die());
         } else 
@@ -157,7 +155,7 @@ public class BossController : MonoBehaviour
             }
             else
             {
-                StaticVariables.bossLife = 15;
+                StaticVariables.bossLife = 40;
                 healthBar.value = StaticVariables.bossLife;
             }
         }

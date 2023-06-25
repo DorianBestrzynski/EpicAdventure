@@ -17,6 +17,9 @@ public class HarmBoss : MonoBehaviour
     private void Start()
     {
         healthBar.maxValue = StaticVariables.bossLife;
+        healthBar.value = StaticVariables.bossLife;
+        Debug.Log("Boss life:" + StaticVariables.bossLife);
+
        if (gameObject.CompareTag("Player")) 
         {
             playerCollectibles = StaticVariables.playerOneCollectibles;

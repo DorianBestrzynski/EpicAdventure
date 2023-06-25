@@ -1511,8 +1511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54556e3f814c55943abf3acc11aba83e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 0}
-  onToggle: {fileID: 0}
+  volumeSlider: {fileID: 804295580}
+  onToggle: {fileID: 51637801}
 --- !u!114 &1469394023
 MonoBehaviour:
   m_ObjectHideFlags: 0

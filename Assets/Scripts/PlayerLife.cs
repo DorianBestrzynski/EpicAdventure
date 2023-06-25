@@ -31,6 +31,7 @@ public class PlayerLife : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        AudioListener.volume = 0.3f;
         dying = false;
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();

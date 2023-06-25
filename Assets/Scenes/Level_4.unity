@@ -22391,6 +22391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scoreboard
       objectReference: {fileID: 0}
+    - target: {fileID: 6911523266910472072, guid: 242548f56618b9845b0031b6c879e42e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6911523266910472073, guid: 242548f56618b9845b0031b6c879e42e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -23196,6 +23200,10 @@ PrefabInstance:
     - target: {fileID: 5177978194197223580, guid: 2e4699f025045204b9f46ab3c69406e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177978194197223583, guid: 2e4699f025045204b9f46ab3c69406e7, type: 3}
+      propertyPath: speed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5177978194197223583, guid: 2e4699f025045204b9f46ab3c69406e7, type: 3}
       propertyPath: wayPoints.Array.data[0]
@@ -24122,11 +24130,11 @@ PrefabInstance:
       objectReference: {fileID: 949330007}
     - target: {fileID: 3544544853820991598, guid: 93c4f6f2da1824844837bf3ae688d74d, type: 3}
       propertyPath: walkSpeed
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3544544853820991598, guid: 93c4f6f2da1824844837bf3ae688d74d, type: 3}
       propertyPath: shootRange
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 3544544853820991598, guid: 93c4f6f2da1824844837bf3ae688d74d, type: 3}
       propertyPath: shootSpeed
@@ -24134,7 +24142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3544544853820991598, guid: 93c4f6f2da1824844837bf3ae688d74d, type: 3}
       propertyPath: followRange
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3544544853820991598, guid: 93c4f6f2da1824844837bf3ae688d74d, type: 3}
       propertyPath: secondPlayer
@@ -24471,9 +24479,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 15
+  m_MaxValue: 40
   m_WholeNumbers: 1
-  m_Value: 15
+  m_Value: 4
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -24618,11 +24626,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3836147865707322678, guid: 9d7aedacb4350e74d8523b95aa545e24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.300003
+      value: 226
       objectReference: {fileID: 0}
     - target: {fileID: 3836147865707322678, guid: 9d7aedacb4350e74d8523b95aa545e24, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.450001
+      value: 52.3
       objectReference: {fileID: 0}
     - target: {fileID: 3836147865707322678, guid: 9d7aedacb4350e74d8523b95aa545e24, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25150,6 +25158,10 @@ PrefabInstance:
     - target: {fileID: 1484431943357843639, guid: 383488cea9cfe4549bf146d24a5fabd2, type: 3}
       propertyPath: m_Name
       value: InstructionsMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484431943357843639, guid: 383488cea9cfe4549bf146d24a5fabd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1484431943357843642, guid: 383488cea9cfe4549bf146d24a5fabd2, type: 3}
       propertyPath: m_Pivot.x
@@ -25701,11 +25713,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8474961765234778152, guid: 7dea17d23ae03a1489371e546a465ec5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 224.7
       objectReference: {fileID: 0}
     - target: {fileID: 8474961765234778152, guid: 7dea17d23ae03a1489371e546a465ec5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.45
+      value: 53.3
       objectReference: {fileID: 0}
     - target: {fileID: 8474961765234778152, guid: 7dea17d23ae03a1489371e546a465ec5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26130,6 +26142,10 @@ PrefabInstance:
     - target: {fileID: 4541979716256908313, guid: 5bbdb27bf190d244c91aba6d1edbbb43, type: 3}
       propertyPath: m_Name
       value: PauseButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541979716256908313, guid: 5bbdb27bf190d244c91aba6d1edbbb43, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4541979716256908315, guid: 5bbdb27bf190d244c91aba6d1edbbb43, type: 3}
       propertyPath: m_Navigation.m_Mode

@@ -18,7 +18,7 @@ public class StaticVariables : MonoBehaviour
 
     public static int playerTwoLife = -1;
 
-    public static int bossLife = 15;
+    public static int bossLife = 40;
 
     public static float playerOneSpeed;
 
@@ -49,4 +49,7 @@ public class StaticVariables : MonoBehaviour
     public static int playerOneDeathsOnLevel = 0;
 
     public static int playerTwoDeathsOnLevel = 0;
+
+    public static float savedVolume = 1;
+    public static float savedSliderValue = 1;
 }

@@ -14,12 +14,14 @@ public class StartMenu : MonoBehaviour
 
 
 
-    private float previousSliderValue = 1f;
+    private float previousSliderValue = StaticVariables.savedSliderValue;
 
     void Start()
     {
-        
-        AudioListener.volume = 1;
+        Debug.Log("Music value: " + StaticVariables.savedVolume);
+        Debug.Log("Slider value: " + StaticVariables.savedSliderValue);
+        volumeSlider.value = StaticVariables.savedSliderValue;
+        AudioListener.volume = 0.5f;
         
     }
     public void StartGame()
@@ -30,6 +32,7 @@ public class StartMenu : MonoBehaviour
     public void ChangeVolumne()
     {
         AudioListener.volume = volumeSlider.value;
+        StaticVariables.savedVolume = AudioListener.volume;
         if (volumeSlider.value == 0)
         {
             onToggle.isOn = false;
@@ -41,6 +44,7 @@ public class StartMenu : MonoBehaviour
 
 
         previousSliderValue = volumeSlider.value;
+        StaticVariables.savedSliderValue = previousSliderValue;
 
     }
 
@@ -51,6 +55,10 @@ public class StartMenu : MonoBehaviour
             Debug.Log("Should turn off" + audioIn);
             AudioListener.volume = 0;
             volumeSlider.value = 0;
+            StaticVariables.savedSliderValue = 0;
+            StaticVariables.savedVolume = 0;
+
+
         }
         else if (audioIn)
         {
@@ -58,6 +66,8 @@ public class StartMenu : MonoBehaviour
             Debug.Log("Should turn on" + audioIn);
             AudioListener.volume = 1;
             volumeSlider.value = 1;
+            StaticVariables.savedSliderValue = 0;
+            StaticVariables.savedVolume = 0;
         }
     }
 
